@@ -1,0 +1,1098 @@
+2020-Nov-26 13:05:39 Наличие необходимых модулей php (check_php_modules): Fail
+Ошибка! Не установлены требуемые расширения:Поддержка XML
+2020-Nov-26 13:05:39 Обязательные параметры PHP (check_php_settings): Fail
+Ошибка! Параметр opcache.revalidate_freq = 2, требуется 0
+2020-Nov-26 13:05:39 Модули веб-сервера (check_security): Ok
+Конфликтов не выявлено
+2020-Nov-26 13:05:39 Значения переменных сервера (check_server_vars): Ok
+Корректные
+2020-Nov-26 13:05:40 Сохранение сессии (check_session): Ok
+50% done
+2020-Nov-26 13:05:40 Сохранение сессии (check_session): Ok
+Успешно
+2020-Nov-26 13:05:40 Параметры настройки UTF (mbstring и константа BX_UTF) (check_mbstring): Ok
+Правильные. Сайт работает в UTF кодировке
+2020-Nov-26 13:05:40 Служебные скрипты в корне сайта (check_install_scripts): Ok
+Отсутствуют
+2020-Nov-26 13:05:40 Работа с сокетами (check_socket): Ok
+Connection to develop.su:80	Success
+
+Успешно
+2020-Nov-26 13:05:40 Выполнение агентов на cron (check_bx_crontab): Fail
+Ошибка! Не настроен запуск cron_events.php на cron, последний агент отработал больше суток назад.
+2020-Nov-26 13:05:40 Параметры подключения к базе данных (check_dbconn_settings): Ok
+Успешно
+2020-Nov-26 13:05:40 Лишний вывод в файлах конфигурации (check_dbconn): Ok
+Connection to develop.su:80	Success
+
+Успешно
+2020-Nov-26 13:05:40 Сохранение сессии без UserAgent (check_session_ua): Ok
+50% done
+Connection to develop.su:80	Success
+
+2020-Nov-26 13:05:40 Сохранение сессии без UserAgent (check_session_ua): Ok
+Connection to develop.su:80	Success
+
+Успешно
+2020-Nov-26 13:05:40 Настройки сайтов (check_sites): Ok
+Правильные
+2020-Nov-26 13:05:40 Передача объектов по ссылке (check_clone): Ok
+Успешно
+2020-Nov-26 13:05:40 Размер стека и pcre.recursion_limit (check_pcre_recursion): Warning
+Connection to develop.su:80	Success
+
+Замечание. Возможны проблемы в работе с длинными строками из-за системных ограничений
+2020-Nov-26 13:05:41 Загрузка файла (check_upload): Ok
+Connection to develop.su:80	Success
+
+Успешно
+2020-Nov-26 13:05:41 Загрузка файла больше 4Мб (check_upload_big): Fail
+Connection to develop.su:80	Success
+== Request ==
+POST /bitrix/admin/site_checker.php?test_type=upload_test&unique_id=3c88fa3c52a4579e5b169fdb58132246&big=1&raw=0 HTTP/1.1
+Host: develop.su
+Content-Type: multipart/form-data; boundary=--------e3daec60042dde50e28e196a752fb8a0
+Content-Length: 4200195
+
+----------e3daec60042dde50e28e196a752fb8a0
+Content-Disposition: form-data; name="test_file"; filename="site_checker.bin
+Content-Type: image/gif
+
+()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~����������������������������������������������������������������������������������������������������������������()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~����������������������������������������������������������������������������������������������������������������()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~������������������������������������������������������������������������������������������������������������� ... (4200449 bytes)
+== Response ==
+HTTP/1.1 200 OK
+Date: Thu, 26 Nov 2020 10:05:41 GMT
+Server: Apache/2.4.41 (Ubuntu)
+Vary: Accept-Encoding
+Content-Length: 287
+Content-Type: text/html; charset=UTF-8
+
+== Body ==
+move_uploaded_file(,/home/nasa/server/develop.su/bitrix/tmp/site_checker.bin)=false
+$_FILES=
+Array
+(
+    [test_file] => Array
+        (
+            [name] => site_checker.bin
+            [type] => 
+            [tmp_name] => 
+            [error] => 1
+            [size] => 0
+        )
+
+)
+
+==========
+
+Ошибка! Не работает
+2020-Nov-26 13:05:41 Загрузка файла через php://input (check_upload_raw): Ok
+Connection to develop.su:80	Success
+
+Успешно
+2020-Nov-26 13:05:41 Передача POST запроса с большим числом параметров (check_post): Ok
+Connection to develop.su:80	Success
+
+Успешно
+2020-Nov-26 13:06:41 Отправка почты (check_mail): Fail
+Ошибка! Отправлено. Время отправки: 60.35 сек.
+2020-Nov-26 13:07:42 Отправка почтового сообщения больше 64Кб (check_mail_big): Fail
+Ошибка! Отправлено. Время отправки: 60.54 сек.
+2020-Nov-26 13:07:42 Проверка на наличие неотправленных сообщений (check_mail_b_event): Fail
+Ошибка! Есть ошибки при отправке системных почтовых сообщений, число неотправленных сообщений: 8 Определена константа BX_CRONTAB_SUPPORT в /bitrix/php_interface/dbconn.php, при этом должен быть настроен вызов агентов на cron.
+2020-Nov-26 13:07:42 Внутреннее перенаправление (функция LocalRedirect) (check_localredirect): Ok
+50% done
+Connection to develop.su:80	Success
+
+2020-Nov-26 13:07:42 Внутреннее перенаправление (функция LocalRedirect) (check_localredirect): Ok
+Connection to develop.su:80	Success
+
+Успешно
+2020-Nov-26 13:07:43 Фактическое ограничение памяти (check_memory_limit): Ok
+20% done
+Connection to develop.su:80	Success
+
+2020-Nov-26 13:07:43 Фактическое ограничение памяти (check_memory_limit): Ok
+40% done
+Connection to develop.su:80	Success
+
+2020-Nov-26 13:07:43 Фактическое ограничение памяти (check_memory_limit): Ok
+60% done
+Connection to develop.su:80	Success
+
+2020-Nov-26 13:07:43 Фактическое ограничение памяти (check_memory_limit): Ok
+80% done
+Connection to develop.su:80	Success
+
+2020-Nov-26 13:07:43 Фактическое ограничение памяти (check_memory_limit): Warning
+Connection to develop.su:80	Success
+
+Замечание. Не менее 256 М Значение memory_limit было увеличено с 128M до 512M на момент тестирования через ini_set.
+2020-Nov-26 13:07:43 Работа с файлами кеша (check_cache): Ok
+Успешно
+2020-Nov-26 13:07:44 Доступ к серверу обновлений (check_update): Ok
+Успешно
+2020-Nov-26 13:07:44 HTTP авторизация (check_http_auth): Ok
+Connection to develop.su:80	Success
+
+Успешно
+2020-Nov-26 13:07:44 Создание и запуск файла (check_exec): Ok
+Connection to develop.su:80	Success
+
+Успешно
+2020-Nov-26 13:07:44 Функция getimagesize для swf (check_getimagesize): Warning
+Замечание. Вставка swf роликов может не работать
+2020-Nov-26 13:07:44 Версия MySQL-сервера (check_mysql_bug_version): Ok
+Успешно
+2020-Nov-26 13:07:45 Время на БД и веб-сервере (check_mysql_time): Fail
+Ошибка! Время отличается на 10800 секунд
+2020-Nov-26 13:07:45 Режим работы MySQL (check_mysql_mode): Fail
+Ошибка! innodb_strict_mode=ON, требуется OFFПеременная sql_mode в MySQL должна быть пустая, текущее значение: STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+2020-Nov-26 13:07:45 Кодировка соединения (check_mysql_connection_charset): Ok
+character_set_connection=utf8, collation_connection=utf8_unicode_ci, character_set_results=utf8
+Успешно
+2020-Nov-26 13:07:45 Кодировка базы данных (check_mysql_db_charset): Fail
+CHARSET=utf8, COLLATION=utf8_general_ci
+Ошибка! Сравнение для базы (utf8_general_ci) отличается от сравнения для соединения (utf8_unicode_ci). Исправить
+2020-Nov-26 13:07:45 Кодировки таблиц в БД (check_mysql_table_charset): Warning
+Замечание. Не проверено из-за ошибки кодировки базы
+2020-Nov-26 13:07:47 Структура базы данных (check_mysql_table_structure): Ok
+0% done
+В таблице b_sec_iprule_incl_ip поле IP_START "`IP_START` bigint(20) NULL DEFAULT NULL" не соответствует описанию на диске "`IP_START` bigint(18) NULL DEFAULT NULL"
+В таблице b_sec_iprule_incl_ip поле IP_END "`IP_END` bigint(20) NULL DEFAULT NULL" не соответствует описанию на диске "`IP_END` bigint(18) NULL DEFAULT NULL"
+В таблице b_sec_iprule_excl_ip поле IP_START "`IP_START` bigint(20) NULL DEFAULT NULL" не соответствует описанию на диске "`IP_START` bigint(18) NULL DEFAULT NULL"
+В таблице b_sec_iprule_excl_ip поле IP_END "`IP_END` bigint(20) NULL DEFAULT NULL" не соответствует описанию на диске "`IP_END` bigint(18) NULL DEFAULT NULL"
+В таблице b_sec_user поле ATTEMPTS "`ATTEMPTS` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`ATTEMPTS` int(18) NULL DEFAULT NULL"
+
+2020-Nov-26 13:07:48 Структура базы данных (check_mysql_table_structure): Ok
+3% done
+2020-Nov-26 13:07:49 Структура базы данных (check_mysql_table_structure): Ok
+7% done
+В таблице b_perf_component поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_perf_component поле HIT_ID "`HIT_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`HIT_ID` int(18) NULL DEFAULT NULL"
+В таблице b_perf_component поле NN "`NN` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`NN` int(18) NULL DEFAULT NULL"
+В таблице b_perf_sql поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_perf_sql поле HIT_ID "`HIT_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`HIT_ID` int(18) NULL DEFAULT NULL"
+В таблице b_perf_sql поле COMPONENT_ID "`COMPONENT_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`COMPONENT_ID` int(18) NULL DEFAULT NULL"
+В таблице b_perf_sql поле NN "`NN` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`NN` int(18) NULL DEFAULT NULL"
+В таблице b_perf_sql поле NODE_ID "`NODE_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`NODE_ID` int(18) NULL DEFAULT NULL"
+В таблице b_perf_sql_backtrace поле SQL_ID "`SQL_ID` int(11) NOT NULL" не соответствует описанию на диске "`SQL_ID` int(18) NOT NULL"
+В таблице b_perf_sql_backtrace поле NN "`NN` int(11) NOT NULL" не соответствует описанию на диске "`NN` int(18) NOT NULL"
+В таблице b_perf_sql_backtrace поле LINE_NO "`LINE_NO` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`LINE_NO` int(18) NULL DEFAULT NULL"
+В таблице b_perf_cache поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_perf_cache поле HIT_ID "`HIT_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`HIT_ID` int(18) NULL DEFAULT NULL"
+В таблице b_perf_cache поле COMPONENT_ID "`COMPONENT_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`COMPONENT_ID` int(18) NULL DEFAULT NULL"
+В таблице b_perf_cache поле NN "`NN` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`NN` int(18) NULL DEFAULT NULL"
+В таблице b_perf_error поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_perf_error поле HIT_ID "`HIT_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`HIT_ID` int(18) NULL DEFAULT NULL"
+В таблице b_perf_error поле ERRNO "`ERRNO` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`ERRNO` int(18) NULL DEFAULT NULL"
+В таблице b_perf_error поле ERRLINE "`ERRLINE` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`ERRLINE` int(18) NULL DEFAULT NULL"
+В таблице b_perf_test поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_perf_test поле REFERENCE_ID "`REFERENCE_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`REFERENCE_ID` int(18) NULL DEFAULT NULL"
+В таблице b_perf_cluster поле TIMESTAMP_X "`TIMESTAMP_X` timestamp NULL DEFAULT NULL" не соответствует описанию на диске "`TIMESTAMP_X` timestamp NOT NULL DEFAULT current_timestamp() on update current_timestamp()"
+В таблице b_perf_history поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_perf_history поле TIMESTAMP_X "`TIMESTAMP_X` timestamp NULL DEFAULT NULL" не соответствует описанию на диске "`TIMESTAMP_X` timestamp NOT NULL DEFAULT current_timestamp() on update current_timestamp()"
+
+2020-Nov-26 13:07:49 Структура базы данных (check_mysql_table_structure): Ok
+11% done
+2020-Nov-26 13:07:50 Структура базы данных (check_mysql_table_structure): Ok
+15% done
+2020-Nov-26 13:07:50 Структура базы данных (check_mysql_table_structure): Ok
+19% done
+В таблице b_messageservice_message поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_messageservice_message поле AUTHOR_ID "`AUTHOR_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`AUTHOR_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_messageservice_message поле STATUS_ID "`STATUS_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`STATUS_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_messageservice_rest_app поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_messageservice_rest_app поле AUTHOR_ID "`AUTHOR_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`AUTHOR_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_messageservice_rest_app_lang поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_messageservice_rest_app_lang поле APP_ID "`APP_ID` int(11) NOT NULL" не соответствует описанию на диске "`APP_ID` int(18) NOT NULL"
+
+2020-Nov-26 13:07:54 Структура базы данных (check_mysql_table_structure): Ok
+23% done
+В таблице b_forum поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(10) NOT NULL auto_increment"
+В таблице b_forum поле SORT "`SORT` int(11) NOT NULL DEFAULT "150"" не соответствует описанию на диске "`SORT` int(10) NOT NULL DEFAULT "150""
+В таблице b_forum_topic поле FORUM_ID "`FORUM_ID` int(11) NOT NULL" не соответствует описанию на диске "`FORUM_ID` int(10) NOT NULL"
+В таблице b_forum_topic поле SORT "`SORT` int(11) NOT NULL DEFAULT "150"" не соответствует описанию на диске "`SORT` int(10) NOT NULL DEFAULT "150""
+В таблице b_forum_topic поле VIEWS "`VIEWS` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`VIEWS` int(10) NOT NULL DEFAULT "0""
+В таблице b_forum_topic поле USER_START_ID "`USER_START_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`USER_START_ID` int(10) NULL DEFAULT NULL"
+В таблице b_forum_topic поле POSTS "`POSTS` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`POSTS` int(10) NOT NULL DEFAULT "0""
+В таблице b_forum_topic поле LAST_POSTER_ID "`LAST_POSTER_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`LAST_POSTER_ID` int(10) NULL DEFAULT NULL"
+В таблице b_forum_topic поле ABS_LAST_POSTER_ID "`ABS_LAST_POSTER_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`ABS_LAST_POSTER_ID` int(10) NULL DEFAULT NULL"
+В таблице b_forum_topic поле SOCNET_GROUP_ID "`SOCNET_GROUP_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`SOCNET_GROUP_ID` int(10) NULL DEFAULT NULL"
+В таблице b_forum_topic поле OWNER_ID "`OWNER_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`OWNER_ID` int(10) NULL DEFAULT NULL"
+В таблице b_forum_message поле FORUM_ID "`FORUM_ID` int(11) NOT NULL" не соответствует описанию на диске "`FORUM_ID` int(10) NOT NULL"
+В таблице b_forum_message поле AUTHOR_ID "`AUTHOR_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`AUTHOR_ID` int(10) NULL DEFAULT NULL"
+В таблице b_forum_message поле GUEST_ID "`GUEST_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`GUEST_ID` int(10) NULL DEFAULT NULL"
+В таблице b_forum_message поле EDITOR_ID "`EDITOR_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`EDITOR_ID` int(10) NULL DEFAULT NULL"
+В таблице b_forum_file поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_forum_file поле FORUM_ID "`FORUM_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`FORUM_ID` int(18) NULL DEFAULT NULL"
+В таблице b_forum_file поле TOPIC_ID "`TOPIC_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`TOPIC_ID` int(20) NULL DEFAULT NULL"
+В таблице b_forum_file поле MESSAGE_ID "`MESSAGE_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`MESSAGE_ID` int(20) NULL DEFAULT NULL"
+В таблице b_forum_file поле FILE_ID "`FILE_ID` int(11) NOT NULL" не соответствует описанию на диске "`FILE_ID` int(18) NOT NULL"
+В таблице b_forum_file поле USER_ID "`USER_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`USER_ID` int(18) NULL DEFAULT NULL"
+В таблице b_forum_file поле HITS "`HITS` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`HITS` int(18) NULL DEFAULT NULL"
+В таблице b_forum_user поле ID "`ID` bigint(20) NOT NULL auto_increment" не соответствует описанию на диске "`ID` bigint(10) NOT NULL auto_increment"
+В таблице b_forum_user поле USER_ID "`USER_ID` int(11) NOT NULL" не соответствует описанию на диске "`USER_ID` int(10) NOT NULL"
+В таблице b_forum_user поле AVATAR "`AVATAR` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`AVATAR` int(10) NULL DEFAULT NULL"
+В таблице b_forum_user поле NUM_POSTS "`NUM_POSTS` int(11) NULL DEFAULT "0"" не соответствует описанию на диске "`NUM_POSTS` int(10) NULL DEFAULT "0""
+В таблице b_forum_user поле LAST_POST "`LAST_POST` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`LAST_POST` int(10) NULL DEFAULT NULL"
+В таблице b_forum_subscribe поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(10) NOT NULL auto_increment"
+В таблице b_forum_subscribe поле USER_ID "`USER_ID` int(11) NOT NULL" не соответствует описанию на диске "`USER_ID` int(10) NOT NULL"
+В таблице b_forum_subscribe поле FORUM_ID "`FORUM_ID` int(11) NOT NULL" не соответствует описанию на диске "`FORUM_ID` int(10) NOT NULL"
+В таблице b_forum_subscribe поле TOPIC_ID "`TOPIC_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`TOPIC_ID` int(10) NULL DEFAULT NULL"
+В таблице b_forum_subscribe поле LAST_SEND "`LAST_SEND` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`LAST_SEND` int(10) NULL DEFAULT NULL"
+В таблице b_forum_private_message поле ID "`ID` bigint(20) NOT NULL auto_increment" не соответствует описанию на диске "`ID` bigint(10) NOT NULL auto_increment"
+В таблице b_forum_stat поле USER_ID "`USER_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`USER_ID` int(10) NULL DEFAULT NULL"
+В таблице b_forum_stat поле FORUM_ID "`FORUM_ID` smallint(6) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`FORUM_ID` smallint(5) NOT NULL DEFAULT "0""
+В таблице b_forum_stat поле TOPIC_ID "`TOPIC_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`TOPIC_ID` int(10) NULL DEFAULT NULL"
+
+2020-Nov-26 13:07:54 Структура базы данных (check_mysql_table_structure): Ok
+26% done
+2020-Nov-26 13:07:56 Структура базы данных (check_mysql_table_structure): Ok
+30% done
+В таблице b_form поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_form поле C_SORT "`C_SORT` int(11) NULL DEFAULT "100"" не соответствует описанию на диске "`C_SORT` int(18) NULL DEFAULT "100""
+В таблице b_form поле IMAGE_ID "`IMAGE_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`IMAGE_ID` int(18) NULL DEFAULT NULL"
+В таблице b_form поле RESTRICT_USER "`RESTRICT_USER` int(11) NULL DEFAULT "0"" не соответствует описанию на диске "`RESTRICT_USER` int(5) NULL DEFAULT "0""
+В таблице b_form поле RESTRICT_TIME "`RESTRICT_TIME` int(11) NULL DEFAULT "0"" не соответствует описанию на диске "`RESTRICT_TIME` int(10) NULL DEFAULT "0""
+В таблице b_form_2_mail_template поле FORM_ID "`FORM_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`FORM_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_form_2_mail_template поле MAIL_TEMPLATE_ID "`MAIL_TEMPLATE_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`MAIL_TEMPLATE_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_form_2_site поле FORM_ID "`FORM_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`FORM_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_form_answer поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_form_answer поле FIELD_ID "`FIELD_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`FIELD_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_form_answer поле C_SORT "`C_SORT` int(11) NOT NULL DEFAULT "100"" не соответствует описанию на диске "`C_SORT` int(18) NOT NULL DEFAULT "100""
+В таблице b_form_answer поле FIELD_WIDTH "`FIELD_WIDTH` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`FIELD_WIDTH` int(18) NULL DEFAULT NULL"
+В таблице b_form_answer поле FIELD_HEIGHT "`FIELD_HEIGHT` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`FIELD_HEIGHT` int(18) NULL DEFAULT NULL"
+В таблице b_form_field поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_form_field поле FORM_ID "`FORM_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`FORM_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_form_field поле C_SORT "`C_SORT` int(11) NOT NULL DEFAULT "100"" не соответствует описанию на диске "`C_SORT` int(18) NOT NULL DEFAULT "100""
+В таблице b_form_field поле IMAGE_ID "`IMAGE_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`IMAGE_ID` int(18) NULL DEFAULT NULL"
+В таблице b_form_field_filter поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_form_field_filter поле FIELD_ID "`FIELD_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`FIELD_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_form_field_validator поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_form_field_validator поле FORM_ID "`FORM_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`FORM_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_form_field_validator поле FIELD_ID "`FIELD_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`FIELD_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_form_field_validator поле C_SORT "`C_SORT` int(11) NULL DEFAULT "100"" не соответствует описанию на диске "`C_SORT` int(18) NULL DEFAULT "100""
+В таблице b_form_menu поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_form_menu поле FORM_ID "`FORM_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`FORM_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_form_result поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_form_result поле STATUS_ID "`STATUS_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`STATUS_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_form_result поле FORM_ID "`FORM_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`FORM_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_form_result поле USER_ID "`USER_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`USER_ID` int(18) NULL DEFAULT NULL"
+В таблице b_form_result поле STAT_GUEST_ID "`STAT_GUEST_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`STAT_GUEST_ID` int(18) NULL DEFAULT NULL"
+В таблице b_form_result поле STAT_SESSION_ID "`STAT_SESSION_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`STAT_SESSION_ID` int(18) NULL DEFAULT NULL"
+В таблице b_form_result_answer поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_form_result_answer поле RESULT_ID "`RESULT_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`RESULT_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_form_result_answer поле FORM_ID "`FORM_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`FORM_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_form_result_answer поле FIELD_ID "`FIELD_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`FIELD_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_form_result_answer поле ANSWER_ID "`ANSWER_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`ANSWER_ID` int(18) NULL DEFAULT NULL"
+В таблице b_form_result_answer поле USER_FILE_ID "`USER_FILE_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`USER_FILE_ID` int(18) NULL DEFAULT NULL"
+В таблице b_form_result_answer поле USER_FILE_SIZE "`USER_FILE_SIZE` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`USER_FILE_SIZE` int(18) NULL DEFAULT NULL"
+В таблице b_form_2_group поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_form_2_group поле FORM_ID "`FORM_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`FORM_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_form_2_group поле GROUP_ID "`GROUP_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`GROUP_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_form_2_group поле PERMISSION "`PERMISSION` int(11) NOT NULL DEFAULT "1"" не соответствует описанию на диске "`PERMISSION` int(5) NOT NULL DEFAULT "1""
+В таблице b_form_status поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_form_status поле FORM_ID "`FORM_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`FORM_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_form_status поле C_SORT "`C_SORT` int(11) NOT NULL DEFAULT "100"" не соответствует описанию на диске "`C_SORT` int(18) NOT NULL DEFAULT "100""
+В таблице b_form_status_2_group поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_form_status_2_group поле STATUS_ID "`STATUS_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`STATUS_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_form_status_2_group поле GROUP_ID "`GROUP_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`GROUP_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_form_status_2_mail_template поле STATUS_ID "`STATUS_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`STATUS_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_form_status_2_mail_template поле MAIL_TEMPLATE_ID "`MAIL_TEMPLATE_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`MAIL_TEMPLATE_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_form_crm поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_form_crm_link поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_form_crm_link поле FORM_ID "`FORM_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`FORM_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_form_crm_link поле CRM_ID "`CRM_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`CRM_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_form_crm_field поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_form_crm_field поле LINK_ID "`LINK_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`LINK_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_form_crm_field поле FIELD_ID "`FIELD_ID` int(11) NULL DEFAULT "0"" не соответствует описанию на диске "`FIELD_ID` int(18) NULL DEFAULT "0""
+
+2020-Nov-26 13:07:56 Структура базы данных (check_mysql_table_structure): Ok
+34% done
+2020-Nov-26 13:07:58 Структура базы данных (check_mysql_table_structure): Ok
+38% done
+2020-Nov-26 13:08:00 Структура базы данных (check_mysql_table_structure): Ok
+42% done
+2020-Nov-26 13:08:04 Структура базы данных (check_mysql_table_structure): Ok
+46% done
+В таблице b_landing поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_landing поле VIEWS "`VIEWS` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`VIEWS` int(18) NOT NULL DEFAULT "0""
+В таблице b_landing поле TPL_ID "`TPL_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`TPL_ID` int(18) NULL DEFAULT NULL"
+В таблице b_landing поле SITE_ID "`SITE_ID` int(11) NOT NULL" не соответствует описанию на диске "`SITE_ID` int(18) NOT NULL"
+В таблице b_landing поле FOLDER_ID "`FOLDER_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`FOLDER_ID` int(18) NULL DEFAULT NULL"
+В таблице b_landing поле VERSION "`VERSION` int(11) NOT NULL DEFAULT "1"" не соответствует описанию на диске "`VERSION` int(18) NOT NULL DEFAULT "1""
+В таблице b_landing поле CREATED_BY_ID "`CREATED_BY_ID` int(11) NOT NULL" не соответствует описанию на диске "`CREATED_BY_ID` int(18) NOT NULL"
+В таблице b_landing поле MODIFIED_BY_ID "`MODIFIED_BY_ID` int(11) NOT NULL" не соответствует описанию на диске "`MODIFIED_BY_ID` int(18) NOT NULL"
+В таблице b_landing_block поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_landing_block поле PARENT_ID "`PARENT_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`PARENT_ID` int(18) NULL DEFAULT NULL"
+В таблице b_landing_block поле LID "`LID` int(11) NOT NULL" не соответствует описанию на диске "`LID` int(18) NOT NULL"
+В таблице b_landing_block поле SORT "`SORT` int(11) NULL DEFAULT "500"" не соответствует описанию на диске "`SORT` int(18) NULL DEFAULT "500""
+В таблице b_landing_block поле CREATED_BY_ID "`CREATED_BY_ID` int(11) NOT NULL" не соответствует описанию на диске "`CREATED_BY_ID` int(18) NOT NULL"
+В таблице b_landing_block поле MODIFIED_BY_ID "`MODIFIED_BY_ID` int(11) NOT NULL" не соответствует описанию на диске "`MODIFIED_BY_ID` int(18) NOT NULL"
+В таблице b_landing_site поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_landing_site поле TPL_ID "`TPL_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`TPL_ID` int(18) NULL DEFAULT NULL"
+В таблице b_landing_site поле DOMAIN_ID "`DOMAIN_ID` int(11) NOT NULL" не соответствует описанию на диске "`DOMAIN_ID` int(18) NOT NULL"
+В таблице b_landing_site поле LANDING_ID_INDEX "`LANDING_ID_INDEX` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`LANDING_ID_INDEX` int(18) NULL DEFAULT NULL"
+В таблице b_landing_site поле LANDING_ID_404 "`LANDING_ID_404` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`LANDING_ID_404` int(18) NULL DEFAULT NULL"
+В таблице b_landing_site поле LANDING_ID_503 "`LANDING_ID_503` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`LANDING_ID_503` int(18) NULL DEFAULT NULL"
+В таблице b_landing_site поле CREATED_BY_ID "`CREATED_BY_ID` int(11) NOT NULL" не соответствует описанию на диске "`CREATED_BY_ID` int(18) NOT NULL"
+В таблице b_landing_site поле MODIFIED_BY_ID "`MODIFIED_BY_ID` int(11) NOT NULL" не соответствует описанию на диске "`MODIFIED_BY_ID` int(18) NOT NULL"
+В таблице b_landing_domain поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_landing_domain поле CREATED_BY_ID "`CREATED_BY_ID` int(11) NOT NULL" не соответствует описанию на диске "`CREATED_BY_ID` int(18) NOT NULL"
+В таблице b_landing_domain поле MODIFIED_BY_ID "`MODIFIED_BY_ID` int(11) NOT NULL" не соответствует описанию на диске "`MODIFIED_BY_ID` int(18) NOT NULL"
+В таблице b_landing_template поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_landing_template поле SORT "`SORT` int(11) NULL DEFAULT "100"" не соответствует описанию на диске "`SORT` int(18) NULL DEFAULT "100""
+В таблице b_landing_template поле AREA_COUNT "`AREA_COUNT` int(11) NOT NULL" не соответствует описанию на диске "`AREA_COUNT` int(2) NOT NULL"
+В таблице b_landing_template поле CREATED_BY_ID "`CREATED_BY_ID` int(11) NOT NULL" не соответствует описанию на диске "`CREATED_BY_ID` int(18) NOT NULL"
+В таблице b_landing_template поле MODIFIED_BY_ID "`MODIFIED_BY_ID` int(11) NOT NULL" не соответствует описанию на диске "`MODIFIED_BY_ID` int(18) NOT NULL"
+В таблице b_landing_template_ref поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_landing_template_ref поле ENTITY_ID "`ENTITY_ID` int(11) NOT NULL" не соответствует описанию на диске "`ENTITY_ID` int(18) NOT NULL"
+В таблице b_landing_template_ref поле AREA "`AREA` int(11) NOT NULL" не соответствует описанию на диске "`AREA` int(2) NOT NULL"
+В таблице b_landing_template_ref поле LANDING_ID "`LANDING_ID` int(11) NOT NULL" не соответствует описанию на диске "`LANDING_ID` int(18) NOT NULL"
+В таблице b_landing_repo поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_landing_repo поле CREATED_BY_ID "`CREATED_BY_ID` int(11) NOT NULL" не соответствует описанию на диске "`CREATED_BY_ID` int(18) NOT NULL"
+В таблице b_landing_repo поле MODIFIED_BY_ID "`MODIFIED_BY_ID` int(11) NOT NULL" не соответствует описанию на диске "`MODIFIED_BY_ID` int(18) NOT NULL"
+В таблице b_landing_hook_data поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_landing_hook_data поле ENTITY_ID "`ENTITY_ID` int(11) NOT NULL" не соответствует описанию на диске "`ENTITY_ID` int(18) NOT NULL"
+В таблице b_landing_file поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_landing_file поле ENTITY_ID "`ENTITY_ID` int(11) NOT NULL" не соответствует описанию на диске "`ENTITY_ID` int(18) NOT NULL"
+В таблице b_landing_file поле FILE_ID "`FILE_ID` int(11) NOT NULL" не соответствует описанию на диске "`FILE_ID` int(18) NOT NULL"
+В таблице b_landing_syspage поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_landing_syspage поле SITE_ID "`SITE_ID` int(11) NOT NULL" не соответствует описанию на диске "`SITE_ID` int(18) NOT NULL"
+В таблице b_landing_syspage поле LANDING_ID "`LANDING_ID` int(11) NOT NULL" не соответствует описанию на диске "`LANDING_ID` int(18) NOT NULL"
+В таблице b_landing_demo поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_landing_demo поле CREATED_BY_ID "`CREATED_BY_ID` int(11) NOT NULL" не соответствует описанию на диске "`CREATED_BY_ID` int(18) NOT NULL"
+В таблице b_landing_demo поле MODIFIED_BY_ID "`MODIFIED_BY_ID` int(11) NOT NULL" не соответствует описанию на диске "`MODIFIED_BY_ID` int(18) NOT NULL"
+В таблице b_landing_placement поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_landing_placement поле APP_ID "`APP_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`APP_ID` int(18) NULL DEFAULT NULL"
+В таблице b_landing_placement поле CREATED_BY_ID "`CREATED_BY_ID` int(11) NOT NULL" не соответствует описанию на диске "`CREATED_BY_ID` int(18) NOT NULL"
+В таблице b_landing_placement поле MODIFIED_BY_ID "`MODIFIED_BY_ID` int(11) NOT NULL" не соответствует описанию на диске "`MODIFIED_BY_ID` int(18) NOT NULL"
+В таблице b_landing_update_block поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_landing_update_block поле LAST_BLOCK_ID "`LAST_BLOCK_ID` int(11) NULL DEFAULT "0"" не соответствует описанию на диске "`LAST_BLOCK_ID` int(18) NULL DEFAULT "0""
+В таблице b_landing_update_block поле CREATED_BY_ID "`CREATED_BY_ID` int(11) NOT NULL" не соответствует описанию на диске "`CREATED_BY_ID` int(18) NOT NULL"
+В таблице b_landing_update_block поле MODIFIED_BY_ID "`MODIFIED_BY_ID` int(11) NOT NULL" не соответствует описанию на диске "`MODIFIED_BY_ID` int(18) NOT NULL"
+В таблице b_landing_urlrewrite поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_landing_urlrewrite поле SITE_ID "`SITE_ID` int(11) NOT NULL" не соответствует описанию на диске "`SITE_ID` int(18) NOT NULL"
+В таблице b_landing_urlrewrite поле LANDING_ID "`LANDING_ID` int(11) NOT NULL" не соответствует описанию на диске "`LANDING_ID` int(18) NOT NULL"
+В таблице b_landing_urlrewrite поле CREATED_BY_ID "`CREATED_BY_ID` int(11) NOT NULL" не соответствует описанию на диске "`CREATED_BY_ID` int(18) NOT NULL"
+В таблице b_landing_urlrewrite поле MODIFIED_BY_ID "`MODIFIED_BY_ID` int(11) NOT NULL" не соответствует описанию на диске "`MODIFIED_BY_ID` int(18) NOT NULL"
+В таблице b_landing_entity_rights поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_landing_entity_rights поле ENTITY_ID "`ENTITY_ID` int(11) NOT NULL" не соответствует описанию на диске "`ENTITY_ID` int(18) NOT NULL"
+В таблице b_landing_entity_rights поле ROLE_ID "`ROLE_ID` int(11) NULL DEFAULT "0"" не соответствует описанию на диске "`ROLE_ID` int(18) NULL DEFAULT "0""
+В таблице b_landing_role поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_landing_role поле CREATED_BY_ID "`CREATED_BY_ID` int(11) NOT NULL" не соответствует описанию на диске "`CREATED_BY_ID` int(18) NOT NULL"
+В таблице b_landing_role поле MODIFIED_BY_ID "`MODIFIED_BY_ID` int(11) NOT NULL" не соответствует описанию на диске "`MODIFIED_BY_ID` int(18) NOT NULL"
+В таблице b_landing_filter_entity поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_landing_filter_entity поле CREATED_BY_ID "`CREATED_BY_ID` int(11) NOT NULL" не соответствует описанию на диске "`CREATED_BY_ID` int(18) NOT NULL"
+В таблице b_landing_filter_entity поле MODIFIED_BY_ID "`MODIFIED_BY_ID` int(11) NOT NULL" не соответствует описанию на диске "`MODIFIED_BY_ID` int(18) NOT NULL"
+В таблице b_landing_filter_block поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_landing_filter_block поле FILTER_ID "`FILTER_ID` int(11) NOT NULL" не соответствует описанию на диске "`FILTER_ID` int(18) NOT NULL"
+В таблице b_landing_filter_block поле BLOCK_ID "`BLOCK_ID` int(11) NOT NULL" не соответствует описанию на диске "`BLOCK_ID` int(18) NOT NULL"
+В таблице b_landing_filter_block отсутствует индекс IX_B_FILTER_ID (filter_id)
+В таблице b_landing_view поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_landing_view поле LID "`LID` int(11) NOT NULL" не соответствует описанию на диске "`LID` int(18) NOT NULL"
+В таблице b_landing_view поле USER_ID "`USER_ID` int(11) NOT NULL" не соответствует описанию на диске "`USER_ID` int(18) NOT NULL"
+В таблице b_landing_view поле VIEWS "`VIEWS` int(11) NOT NULL" не соответствует описанию на диске "`VIEWS` int(18) NOT NULL"
+В таблице b_landing_binding поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_landing_binding поле ENTITY_ID "`ENTITY_ID` int(11) NOT NULL" не соответствует описанию на диске "`ENTITY_ID` int(18) NOT NULL"
+В таблице b_landing_chat поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_landing_chat поле CHAT_ID "`CHAT_ID` int(11) NOT NULL" не соответствует описанию на диске "`CHAT_ID` int(18) NOT NULL"
+В таблице b_landing_chat поле AVATAR "`AVATAR` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`AVATAR` int(18) NULL DEFAULT NULL"
+В таблице b_landing_chat поле CREATED_BY_ID "`CREATED_BY_ID` int(11) NOT NULL" не соответствует описанию на диске "`CREATED_BY_ID` int(18) NOT NULL"
+В таблице b_landing_chat поле MODIFIED_BY_ID "`MODIFIED_BY_ID` int(11) NOT NULL" не соответствует описанию на диске "`MODIFIED_BY_ID` int(18) NOT NULL"
+В таблице b_landing_chat_binding поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_landing_chat_binding поле INTERNAL_CHAT_ID "`INTERNAL_CHAT_ID` int(11) NOT NULL" не соответствует описанию на диске "`INTERNAL_CHAT_ID` int(18) NOT NULL"
+В таблице b_landing_chat_binding поле ENTITY_ID "`ENTITY_ID` int(11) NOT NULL" не соответствует описанию на диске "`ENTITY_ID` int(18) NOT NULL"
+
+2020-Nov-26 13:08:04 Структура базы данных (check_mysql_table_structure): Ok
+50% done
+2020-Nov-26 13:08:07 Структура базы данных (check_mysql_table_structure): Ok
+53% done
+В таблице b_rest_event_offline поле ERROR "`ERROR` int(11) NULL DEFAULT "0"" не соответствует описанию на диске "`ERROR` int(3) NULL DEFAULT "0""
+
+2020-Nov-26 13:08:08 Структура базы данных (check_mysql_table_structure): Ok
+57% done
+В таблице b_clouds_copy_queue поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(32) NOT NULL auto_increment"
+В таблице b_clouds_delete_queue поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(32) NOT NULL auto_increment"
+В таблице b_clouds_file_save поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(32) NOT NULL auto_increment"
+
+2020-Nov-26 13:08:09 Структура базы данных (check_mysql_table_structure): Ok
+61% done
+2020-Nov-26 13:08:10 Структура базы данных (check_mysql_table_structure): Ok
+65% done
+В таблице b_sticker поле MODIFIED_BY "`MODIFIED_BY` int(11) NOT NULL" не соответствует описанию на диске "`MODIFIED_BY` int(18) NOT NULL"
+В таблице b_sticker поле CREATED_BY "`CREATED_BY` int(11) NOT NULL" не соответствует описанию на диске "`CREATED_BY` int(18) NOT NULL"
+
+2020-Nov-26 13:08:11 Структура базы данных (check_mysql_table_structure): Ok
+69% done
+В таблице b_translate_path поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_translate_path поле PARENT_ID "`PARENT_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`PARENT_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_translate_path поле DEPTH_LEVEL "`DEPTH_LEVEL` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`DEPTH_LEVEL` int(18) NOT NULL DEFAULT "0""
+В таблице b_translate_path поле SORT "`SORT` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`SORT` int(18) NOT NULL DEFAULT "0""
+В таблице b_translate_path_lang поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_translate_file поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_translate_file поле PATH_ID "`PATH_ID` int(11) NOT NULL" не соответствует описанию на диске "`PATH_ID` int(18) NOT NULL"
+В таблице b_translate_file поле PHRASE_COUNT "`PHRASE_COUNT` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`PHRASE_COUNT` int(18) NOT NULL DEFAULT "0""
+В таблице b_translate_phrase поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_translate_phrase поле FILE_ID "`FILE_ID` int(11) NOT NULL" не соответствует описанию на диске "`FILE_ID` int(18) NOT NULL"
+В таблице b_translate_phrase поле PATH_ID "`PATH_ID` int(11) NOT NULL" не соответствует описанию на диске "`PATH_ID` int(18) NOT NULL"
+В таблице b_translate_diff поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_translate_diff поле FILE_ID "`FILE_ID` int(11) NOT NULL" не соответствует описанию на диске "`FILE_ID` int(18) NOT NULL"
+В таблице b_translate_diff поле PATH_ID "`PATH_ID` int(11) NOT NULL" не соответствует описанию на диске "`PATH_ID` int(18) NOT NULL"
+В таблице b_translate_diff поле EXCESS_COUNT "`EXCESS_COUNT` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`EXCESS_COUNT` int(18) NOT NULL DEFAULT "0""
+В таблице b_translate_diff поле DEFICIENCY_COUNT "`DEFICIENCY_COUNT` int(11) NULL DEFAULT "0"" не соответствует описанию на диске "`DEFICIENCY_COUNT` int(18) NULL DEFAULT "0""
+В таблице b_translate_path_tree поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_translate_path_tree поле PARENT_ID "`PARENT_ID` int(11) NOT NULL" не соответствует описанию на диске "`PARENT_ID` int(18) NOT NULL"
+В таблице b_translate_path_tree поле PATH_ID "`PATH_ID` int(11) NOT NULL" не соответствует описанию на диске "`PATH_ID` int(18) NOT NULL"
+В таблице b_translate_path_tree поле DEPTH_LEVEL "`DEPTH_LEVEL` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`DEPTH_LEVEL` int(18) NULL DEFAULT NULL"
+
+2020-Nov-26 13:08:13 Структура базы данных (check_mysql_table_structure): Ok
+73% done
+В таблице b_vote_channel поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_vote_channel поле C_SORT "`C_SORT` int(11) NULL DEFAULT "100"" не соответствует описанию на диске "`C_SORT` int(18) NULL DEFAULT "100""
+В таблице b_vote_channel_2_group поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_vote_channel_2_group поле CHANNEL_ID "`CHANNEL_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`CHANNEL_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_vote_channel_2_group поле GROUP_ID "`GROUP_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`GROUP_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_vote_channel_2_group поле PERMISSION "`PERMISSION` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`PERMISSION` int(18) NOT NULL DEFAULT "0""
+В таблице b_vote_channel_2_site поле CHANNEL_ID "`CHANNEL_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`CHANNEL_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_vote поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_vote поле CHANNEL_ID "`CHANNEL_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`CHANNEL_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_vote поле C_SORT "`C_SORT` int(11) NULL DEFAULT "100"" не соответствует описанию на диске "`C_SORT` int(18) NULL DEFAULT "100""
+В таблице b_vote поле AUTHOR_ID "`AUTHOR_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`AUTHOR_ID` int(18) NULL DEFAULT NULL"
+В таблице b_vote поле IMAGE_ID "`IMAGE_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`IMAGE_ID` int(18) NULL DEFAULT NULL"
+В таблице b_vote поле UNIQUE_TYPE "`UNIQUE_TYPE` int(11) NOT NULL DEFAULT "2"" не соответствует описанию на диске "`UNIQUE_TYPE` int(18) NOT NULL DEFAULT "2""
+В таблице b_vote поле KEEP_IP_SEC "`KEEP_IP_SEC` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`KEEP_IP_SEC` int(18) NULL DEFAULT NULL"
+В таблице b_vote поле OPTIONS "`OPTIONS` int(11) NULL DEFAULT "1"" не соответствует описанию на диске "`OPTIONS` int(18) NULL DEFAULT "1""
+В таблице b_vote_question поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_vote_question поле VOTE_ID "`VOTE_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`VOTE_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_vote_question поле C_SORT "`C_SORT` int(11) NULL DEFAULT "100"" не соответствует описанию на диске "`C_SORT` int(18) NULL DEFAULT "100""
+В таблице b_vote_question поле IMAGE_ID "`IMAGE_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`IMAGE_ID` int(18) NULL DEFAULT NULL"
+В таблице b_vote_question поле FIELD_TYPE "`FIELD_TYPE` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`FIELD_TYPE` int(5) NOT NULL DEFAULT "0""
+В таблице b_vote_answer поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_vote_answer поле QUESTION_ID "`QUESTION_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`QUESTION_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_vote_answer поле C_SORT "`C_SORT` int(11) NULL DEFAULT "100"" не соответствует описанию на диске "`C_SORT` int(18) NULL DEFAULT "100""
+В таблице b_vote_answer поле IMAGE_ID "`IMAGE_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`IMAGE_ID` int(18) NULL DEFAULT NULL"
+В таблице b_vote_answer поле COUNTER "`COUNTER` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`COUNTER` int(18) NOT NULL DEFAULT "0""
+В таблице b_vote_answer поле FIELD_TYPE "`FIELD_TYPE` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`FIELD_TYPE` int(5) NOT NULL DEFAULT "0""
+В таблице b_vote_answer поле FIELD_WIDTH "`FIELD_WIDTH` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`FIELD_WIDTH` int(18) NULL DEFAULT NULL"
+В таблице b_vote_answer поле FIELD_HEIGHT "`FIELD_HEIGHT` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`FIELD_HEIGHT` int(18) NULL DEFAULT NULL"
+В таблице b_vote_event поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_vote_event поле VOTE_ID "`VOTE_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`VOTE_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_vote_event поле VOTE_USER_ID "`VOTE_USER_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`VOTE_USER_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_vote_event поле STAT_SESSION_ID "`STAT_SESSION_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`STAT_SESSION_ID` int(18) NULL DEFAULT NULL"
+В таблице b_vote_event_question поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_vote_event_question поле EVENT_ID "`EVENT_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`EVENT_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_vote_event_question поле QUESTION_ID "`QUESTION_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`QUESTION_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_vote_event_answer поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_vote_event_answer поле EVENT_QUESTION_ID "`EVENT_QUESTION_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`EVENT_QUESTION_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_vote_event_answer поле ANSWER_ID "`ANSWER_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`ANSWER_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_vote_user поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_vote_user поле COOKIE_ID "`COOKIE_ID` int(11) NOT NULL" не соответствует описанию на диске "`COOKIE_ID` int(18) NOT NULL"
+В таблице b_vote_user поле AUTH_USER_ID "`AUTH_USER_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`AUTH_USER_ID` int(18) NULL DEFAULT NULL"
+В таблице b_vote_user поле COUNTER "`COUNTER` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`COUNTER` int(18) NOT NULL DEFAULT "0""
+В таблице b_vote_user поле STAT_GUEST_ID "`STAT_GUEST_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`STAT_GUEST_ID` int(18) NULL DEFAULT NULL"
+
+2020-Nov-26 13:08:15 Структура базы данных (check_mysql_table_structure): Ok
+76% done
+В таблице b_seo_search_engine поле SORT "`SORT` int(11) NULL DEFAULT "100"" не соответствует описанию на диске "`SORT` int(5) NULL DEFAULT "100""
+В таблице b_seo_sitemap поле TIMESTAMP_X "`TIMESTAMP_X` timestamp NULL DEFAULT NULL" не соответствует описанию на диске "`TIMESTAMP_X` timestamp NOT NULL DEFAULT current_timestamp() on update current_timestamp()"
+В таблице b_seo_adv_link поле LINK_ID "`LINK_ID` int(11) NOT NULL" не соответствует описанию на диске "`LINK_ID` int(18) NOT NULL"
+В таблице b_seo_adv_log поле RESPONSE_STATUS "`RESPONSE_STATUS` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`RESPONSE_STATUS` int(5) NULL DEFAULT NULL"
+В таблице b_seo_yandex_direct_stat поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_seo_yandex_direct_stat поле CLICKS "`CLICKS` int(11) NULL DEFAULT "0"" не соответствует описанию на диске "`CLICKS` int(7) NULL DEFAULT "0""
+В таблице b_seo_yandex_direct_stat поле CLICKS_SEARCH "`CLICKS_SEARCH` int(11) NULL DEFAULT "0"" не соответствует описанию на диске "`CLICKS_SEARCH` int(7) NULL DEFAULT "0""
+В таблице b_seo_yandex_direct_stat поле CLICKS_CONTEXT "`CLICKS_CONTEXT` int(11) NULL DEFAULT "0"" не соответствует описанию на диске "`CLICKS_CONTEXT` int(7) NULL DEFAULT "0""
+В таблице b_seo_yandex_direct_stat поле SHOWS "`SHOWS` int(11) NULL DEFAULT "0"" не соответствует описанию на диске "`SHOWS` int(7) NULL DEFAULT "0""
+В таблице b_seo_yandex_direct_stat поле SHOWS_SEARCH "`SHOWS_SEARCH` int(11) NULL DEFAULT "0"" не соответствует описанию на диске "`SHOWS_SEARCH` int(7) NULL DEFAULT "0""
+В таблице b_seo_yandex_direct_stat поле SHOWS_CONTEXT "`SHOWS_CONTEXT` int(11) NULL DEFAULT "0"" не соответствует описанию на диске "`SHOWS_CONTEXT` int(7) NULL DEFAULT "0""
+
+2020-Nov-26 13:08:30 Структура базы данных (check_mysql_table_structure): Ok
+80% done
+В таблице b_lang поле SORT "`SORT` int(11) NOT NULL DEFAULT "100"" не соответствует описанию на диске "`SORT` int(18) NOT NULL DEFAULT "100""
+В таблице b_culture поле WEEK_START "`WEEK_START` int(11) NULL DEFAULT "1"" не соответствует описанию на диске "`WEEK_START` int(1) NULL DEFAULT "1""
+В таблице b_culture поле DAY_MONTH_FORMAT "`DAY_MONTH_FORMAT` varchar(50) NULL DEFAULT "M j"" не соответствует описанию на диске "`DAY_MONTH_FORMAT` varchar(50) NULL DEFAULT "F j""
+В таблице b_event_type поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_event_type поле SORT "`SORT` int(11) NOT NULL DEFAULT "150"" не соответствует описанию на диске "`SORT` int(18) NOT NULL DEFAULT "150""
+В таблице b_event_message поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_event_message поле TIMESTAMP_X "`TIMESTAMP_X` timestamp NULL DEFAULT NULL" не соответствует описанию на диске "`TIMESTAMP_X` timestamp NOT NULL DEFAULT current_timestamp() on update current_timestamp()"
+В таблице b_event_attachment поле EVENT_ID "`EVENT_ID` int(11) NOT NULL" не соответствует описанию на диске "`EVENT_ID` int(18) NOT NULL"
+В таблице b_event_attachment поле FILE_ID "`FILE_ID` int(11) NOT NULL" не соответствует описанию на диске "`FILE_ID` int(18) NOT NULL"
+В таблице b_event_message_attachment поле EVENT_MESSAGE_ID "`EVENT_MESSAGE_ID` int(11) NOT NULL" не соответствует описанию на диске "`EVENT_MESSAGE_ID` int(18) NOT NULL"
+В таблице b_event_message_attachment поле FILE_ID "`FILE_ID` int(11) NOT NULL" не соответствует описанию на диске "`FILE_ID` int(18) NOT NULL"
+В таблице b_event поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_event поле MESSAGE_ID "`MESSAGE_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`MESSAGE_ID` int(18) NULL DEFAULT NULL"
+В таблице b_group поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_group поле TIMESTAMP_X "`TIMESTAMP_X` timestamp NULL DEFAULT NULL" не соответствует описанию на диске "`TIMESTAMP_X` timestamp NOT NULL DEFAULT current_timestamp() on update current_timestamp()"
+В таблице b_group поле C_SORT "`C_SORT` int(11) NOT NULL DEFAULT "100"" не соответствует описанию на диске "`C_SORT` int(18) NOT NULL DEFAULT "100""
+В таблице b_user поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_user поле TIMESTAMP_X "`TIMESTAMP_X` timestamp NULL DEFAULT NULL" не соответствует описанию на диске "`TIMESTAMP_X` timestamp NOT NULL DEFAULT current_timestamp() on update current_timestamp()"
+В таблице b_user поле PERSONAL_PHOTO "`PERSONAL_PHOTO` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`PERSONAL_PHOTO` int(18) NULL DEFAULT NULL"
+В таблице b_user поле WORK_LOGO "`WORK_LOGO` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`WORK_LOGO` int(18) NULL DEFAULT NULL"
+В таблице b_user поле LOGIN_ATTEMPTS "`LOGIN_ATTEMPTS` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`LOGIN_ATTEMPTS` int(18) NULL DEFAULT NULL"
+В таблице b_user поле TIME_ZONE_OFFSET "`TIME_ZONE_OFFSET` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`TIME_ZONE_OFFSET` int(18) NULL DEFAULT NULL"
+В таблице b_user_group поле USER_ID "`USER_ID` int(11) NOT NULL" не соответствует описанию на диске "`USER_ID` int(18) NOT NULL"
+В таблице b_user_group поле GROUP_ID "`GROUP_ID` int(11) NOT NULL" не соответствует описанию на диске "`GROUP_ID` int(18) NOT NULL"
+В таблице b_user_field_confirm поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_user_field_confirm поле USER_ID "`USER_ID` int(11) NOT NULL" не соответствует описанию на диске "`USER_ID` int(18) NOT NULL"
+В таблице b_user_field_confirm поле DATE_CHANGE "`DATE_CHANGE` timestamp NULL DEFAULT NULL" не соответствует описанию на диске "`DATE_CHANGE` timestamp NOT NULL DEFAULT current_timestamp() on update current_timestamp()"
+В таблице b_user_field_confirm поле ATTEMPTS "`ATTEMPTS` int(11) NULL DEFAULT "0"" не соответствует описанию на диске "`ATTEMPTS` int(18) NULL DEFAULT "0""
+В таблице b_module поле DATE_ACTIVE "`DATE_ACTIVE` timestamp NULL DEFAULT NULL" не соответствует описанию на диске "`DATE_ACTIVE` timestamp NOT NULL DEFAULT current_timestamp() on update current_timestamp()"
+В таблице b_module_to_module поле TIMESTAMP_X "`TIMESTAMP_X` timestamp NULL DEFAULT NULL" не соответствует описанию на диске "`TIMESTAMP_X` timestamp NOT NULL DEFAULT current_timestamp() on update current_timestamp()"
+В таблице b_module_to_module поле SORT "`SORT` int(11) NOT NULL DEFAULT "100"" не соответствует описанию на диске "`SORT` int(18) NOT NULL DEFAULT "100""
+В таблице b_module_to_module поле VERSION "`VERSION` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`VERSION` int(18) NULL DEFAULT NULL"
+В таблице b_agent поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_agent поле SORT "`SORT` int(11) NOT NULL DEFAULT "100"" не соответствует описанию на диске "`SORT` int(18) NOT NULL DEFAULT "100""
+В таблице b_agent поле AGENT_INTERVAL "`AGENT_INTERVAL` int(11) NULL DEFAULT "86400"" не соответствует описанию на диске "`AGENT_INTERVAL` int(18) NULL DEFAULT "86400""
+В таблице b_agent поле USER_ID "`USER_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`USER_ID` int(18) NULL DEFAULT NULL"
+В таблице b_file поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_file поле TIMESTAMP_X "`TIMESTAMP_X` timestamp NULL DEFAULT NULL" не соответствует описанию на диске "`TIMESTAMP_X` timestamp NOT NULL DEFAULT current_timestamp() on update current_timestamp()"
+В таблице b_file поле HEIGHT "`HEIGHT` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`HEIGHT` int(18) NULL DEFAULT NULL"
+В таблице b_file поле WIDTH "`WIDTH` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`WIDTH` int(18) NULL DEFAULT NULL"
+В таблице b_file_preview поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_file_preview поле FILE_ID "`FILE_ID` int(11) NOT NULL" не соответствует описанию на диске "`FILE_ID` int(18) NOT NULL"
+В таблице b_file_preview поле PREVIEW_ID "`PREVIEW_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`PREVIEW_ID` int(18) NULL DEFAULT NULL"
+В таблице b_file_preview поле PREVIEW_IMAGE_ID "`PREVIEW_IMAGE_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`PREVIEW_IMAGE_ID` int(18) NULL DEFAULT NULL"
+В таблице b_favorite поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_favorite поле C_SORT "`C_SORT` int(11) NOT NULL DEFAULT "100"" не соответствует описанию на диске "`C_SORT` int(18) NOT NULL DEFAULT "100""
+В таблице b_favorite поле MODIFIED_BY "`MODIFIED_BY` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`MODIFIED_BY` int(18) NULL DEFAULT NULL"
+В таблице b_favorite поле CREATED_BY "`CREATED_BY` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`CREATED_BY` int(18) NULL DEFAULT NULL"
+В таблице b_favorite поле CODE_ID "`CODE_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`CODE_ID` int(18) NULL DEFAULT NULL"
+В таблице b_user_stored_auth поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_user_stored_auth поле USER_ID "`USER_ID` int(11) NOT NULL" не соответствует описанию на диске "`USER_ID` int(18) NOT NULL"
+В таблице b_task поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_group_task поле GROUP_ID "`GROUP_ID` int(11) NOT NULL" не соответствует описанию на диске "`GROUP_ID` int(18) NOT NULL"
+В таблице b_group_task поле TASK_ID "`TASK_ID` int(11) NOT NULL" не соответствует описанию на диске "`TASK_ID` int(18) NOT NULL"
+В таблице b_operation поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_task_operation поле TASK_ID "`TASK_ID` int(11) NOT NULL" не соответствует описанию на диске "`TASK_ID` int(18) NOT NULL"
+В таблице b_task_operation поле OPERATION_ID "`OPERATION_ID` int(11) NOT NULL" не соответствует описанию на диске "`OPERATION_ID` int(18) NOT NULL"
+В таблице b_group_subordinate поле ID "`ID` int(11) NOT NULL" не соответствует описанию на диске "`ID` int(18) NOT NULL"
+В таблице b_event_log поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_event_log поле TIMESTAMP_X "`TIMESTAMP_X` timestamp NULL DEFAULT NULL" не соответствует описанию на диске "`TIMESTAMP_X` timestamp NOT NULL DEFAULT current_timestamp() on update current_timestamp()"
+В таблице b_event_log поле USER_ID "`USER_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`USER_ID` int(18) NULL DEFAULT NULL"
+В таблице b_event_log поле GUEST_ID "`GUEST_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`GUEST_ID` int(18) NULL DEFAULT NULL"
+В таблице b_user_hit_auth поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_user_hit_auth поле USER_ID "`USER_ID` int(11) NOT NULL" не соответствует описанию на диске "`USER_ID` int(18) NOT NULL"
+В таблице b_user_hit_auth поле TIMESTAMP_X "`TIMESTAMP_X` timestamp NULL DEFAULT NULL" не соответствует описанию на диске "`TIMESTAMP_X` timestamp NOT NULL DEFAULT current_timestamp() on update current_timestamp()"
+В таблице b_short_uri поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_short_uri поле URI_CRC "`URI_CRC` int(11) NOT NULL" не соответствует описанию на диске "`URI_CRC` int(18) NOT NULL"
+В таблице b_short_uri поле SHORT_URI_CRC "`SHORT_URI_CRC` int(11) NOT NULL" не соответствует описанию на диске "`SHORT_URI_CRC` int(18) NOT NULL"
+В таблице b_short_uri поле STATUS "`STATUS` int(11) NOT NULL DEFAULT "301"" не соответствует описанию на диске "`STATUS` int(18) NOT NULL DEFAULT "301""
+В таблице b_short_uri поле NUMBER_USED "`NUMBER_USED` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`NUMBER_USED` int(18) NOT NULL DEFAULT "0""
+В таблице b_user_counter поле USER_ID "`USER_ID` int(11) NOT NULL" не соответствует описанию на диске "`USER_ID` int(18) NOT NULL"
+В таблице b_user_counter поле CNT "`CNT` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`CNT` int(18) NOT NULL DEFAULT "0""
+В таблице b_hot_keys_code поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_hot_keys поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_hot_keys поле CODE_ID "`CODE_ID` int(11) NOT NULL" не соответствует описанию на диске "`CODE_ID` int(18) NOT NULL"
+В таблице b_hot_keys поле USER_ID "`USER_ID` int(11) NOT NULL" не соответствует описанию на диске "`USER_ID` int(18) NOT NULL"
+В таблице b_admin_notify поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_admin_notify_lang поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_admin_notify_lang поле NOTIFY_ID "`NOTIFY_ID` int(11) NOT NULL" не соответствует описанию на диске "`NOTIFY_ID` int(18) NOT NULL"
+В таблице b_filters поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_filters поле USER_ID "`USER_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`USER_ID` int(18) NULL DEFAULT NULL"
+В таблице b_filters поле SORT "`SORT` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`SORT` int(18) NULL DEFAULT NULL"
+В таблице b_smile поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_smile поле SET_ID "`SET_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`SET_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_smile поле SORT "`SORT` int(11) NOT NULL DEFAULT "150"" не соответствует описанию на диске "`SORT` int(10) NOT NULL DEFAULT "150""
+В таблице b_smile_set поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_smile_set поле PARENT_ID "`PARENT_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`PARENT_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_smile_set поле SORT "`SORT` int(11) NOT NULL DEFAULT "150"" не соответствует описанию на диске "`SORT` int(10) NOT NULL DEFAULT "150""
+В таблице b_smile_lang поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_geoip_handlers поле SORT "`SORT` int(11) NOT NULL DEFAULT "100"" не соответствует описанию на диске "`SORT` int(10) NOT NULL DEFAULT "100""
+В таблице b_consent_user_consent поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_consent_user_consent поле AGREEMENT_ID "`AGREEMENT_ID` int(11) NOT NULL" не соответствует описанию на диске "`AGREEMENT_ID` int(18) NOT NULL"
+В таблице b_consent_user_consent поле USER_ID "`USER_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`USER_ID` int(18) NULL DEFAULT NULL"
+В таблице b_consent_agreement поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_consent_field поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_consent_field поле AGREEMENT_ID "`AGREEMENT_ID` int(11) NOT NULL" не соответствует описанию на диске "`AGREEMENT_ID` int(18) NOT NULL"
+В таблице b_consent_user_consent_item поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_consent_user_consent_item поле USER_CONSENT_ID "`USER_CONSENT_ID` int(11) NOT NULL" не соответствует описанию на диске "`USER_CONSENT_ID` int(18) NOT NULL"
+В таблице b_composite_page поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_composite_page поле VIEWS "`VIEWS` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`VIEWS` int(18) NOT NULL DEFAULT "0""
+В таблице b_composite_page поле REWRITES "`REWRITES` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`REWRITES` int(18) NOT NULL DEFAULT "0""
+В таблице b_composite_page поле SIZE "`SIZE` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`SIZE` int(18) NOT NULL DEFAULT "0""
+В таблице b_composite_log поле ID "`ID` int(11) NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(18) NOT NULL auto_increment"
+В таблице b_composite_log поле USER_ID "`USER_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`USER_ID` int(18) NOT NULL DEFAULT "0""
+В таблице b_composite_log поле PAGE_ID "`PAGE_ID` int(11) NOT NULL DEFAULT "0"" не соответствует описанию на диске "`PAGE_ID` int(18) NOT NULL DEFAULT "0""
+
+2020-Nov-26 13:08:32 Структура базы данных (check_mysql_table_structure): Ok
+84% done
+В таблице b_search_content_site поле SEARCH_CONTENT_ID "`SEARCH_CONTENT_ID` int(11) NOT NULL" не соответствует описанию на диске "`SEARCH_CONTENT_ID` int(18) NOT NULL"
+
+2020-Nov-26 13:08:32 Структура базы данных (check_mysql_table_structure): Ok
+88% done
+В таблице b_hlblock_entity поле ID "`ID` int(10) unsigned NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(11) unsigned NOT NULL auto_increment"
+В таблице b_hlblock_entity_lang поле ID "`ID` int(10) unsigned NOT NULL" не соответствует описанию на диске "`ID` int(11) unsigned NOT NULL"
+В таблице b_hlblock_entity_rights поле ID "`ID` int(10) unsigned NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(11) unsigned NOT NULL auto_increment"
+В таблице b_hlblock_entity_rights поле HL_ID "`HL_ID` int(10) unsigned NOT NULL" не соответствует описанию на диске "`HL_ID` int(11) unsigned NOT NULL"
+В таблице b_hlblock_entity_rights поле TASK_ID "`TASK_ID` int(10) unsigned NOT NULL" не соответствует описанию на диске "`TASK_ID` int(11) unsigned NOT NULL"
+
+2020-Nov-26 13:08:35 Структура базы данных (check_mysql_table_structure): Ok
+92% done
+В таблице b_iblock_type поле SORT "`SORT` int(11) NOT NULL DEFAULT "500"" не соответствует описанию на диске "`SORT` int(18) NOT NULL DEFAULT "500""
+В таблице b_iblock поле PICTURE "`PICTURE` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`PICTURE` int(18) NULL DEFAULT NULL"
+В таблице b_iblock поле SOCNET_GROUP_ID "`SOCNET_GROUP_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`SOCNET_GROUP_ID` int(18) NULL DEFAULT NULL"
+В таблице b_iblock_site поле IBLOCK_ID "`IBLOCK_ID` int(11) NOT NULL" не соответствует описанию на диске "`IBLOCK_ID` int(18) NOT NULL"
+В таблице b_iblock_messages поле IBLOCK_ID "`IBLOCK_ID` int(11) NOT NULL" не соответствует описанию на диске "`IBLOCK_ID` int(18) NOT NULL"
+В таблице b_iblock_fields поле IBLOCK_ID "`IBLOCK_ID` int(11) NOT NULL" не соответствует описанию на диске "`IBLOCK_ID` int(18) NOT NULL"
+В таблице b_iblock_property поле LINK_IBLOCK_ID "`LINK_IBLOCK_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`LINK_IBLOCK_ID` int(18) NULL DEFAULT NULL"
+В таблице b_iblock_section поле MODIFIED_BY "`MODIFIED_BY` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`MODIFIED_BY` int(18) NULL DEFAULT NULL"
+В таблице b_iblock_section поле CREATED_BY "`CREATED_BY` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`CREATED_BY` int(18) NULL DEFAULT NULL"
+В таблице b_iblock_section поле PICTURE "`PICTURE` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`PICTURE` int(18) NULL DEFAULT NULL"
+В таблице b_iblock_section поле LEFT_MARGIN "`LEFT_MARGIN` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`LEFT_MARGIN` int(18) NULL DEFAULT NULL"
+В таблице b_iblock_section поле RIGHT_MARGIN "`RIGHT_MARGIN` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`RIGHT_MARGIN` int(18) NULL DEFAULT NULL"
+В таблице b_iblock_section поле DEPTH_LEVEL "`DEPTH_LEVEL` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`DEPTH_LEVEL` int(18) NULL DEFAULT NULL"
+В таблице b_iblock_section поле DETAIL_PICTURE "`DETAIL_PICTURE` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`DETAIL_PICTURE` int(18) NULL DEFAULT NULL"
+В таблице b_iblock_section поле SOCNET_GROUP_ID "`SOCNET_GROUP_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`SOCNET_GROUP_ID` int(18) NULL DEFAULT NULL"
+В таблице b_iblock_element поле MODIFIED_BY "`MODIFIED_BY` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`MODIFIED_BY` int(18) NULL DEFAULT NULL"
+В таблице b_iblock_element поле CREATED_BY "`CREATED_BY` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`CREATED_BY` int(18) NULL DEFAULT NULL"
+В таблице b_iblock_element поле PREVIEW_PICTURE "`PREVIEW_PICTURE` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`PREVIEW_PICTURE` int(18) NULL DEFAULT NULL"
+В таблице b_iblock_element поле DETAIL_PICTURE "`DETAIL_PICTURE` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`DETAIL_PICTURE` int(18) NULL DEFAULT NULL"
+В таблице b_iblock_element поле WF_STATUS_ID "`WF_STATUS_ID` int(11) NULL DEFAULT "1"" не соответствует описанию на диске "`WF_STATUS_ID` int(18) NULL DEFAULT "1""
+В таблице b_iblock_element поле WF_LOCKED_BY "`WF_LOCKED_BY` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`WF_LOCKED_BY` int(18) NULL DEFAULT NULL"
+В таблице b_iblock_element поле SHOW_COUNTER "`SHOW_COUNTER` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`SHOW_COUNTER` int(18) NULL DEFAULT NULL"
+В таблице b_iblock_section_element поле ADDITIONAL_PROPERTY_ID "`ADDITIONAL_PROPERTY_ID` int(11) NULL DEFAULT NULL" не соответствует описанию на диске "`ADDITIONAL_PROPERTY_ID` int(18) NULL DEFAULT NULL"
+В таблице b_iblock_sequence поле IBLOCK_ID "`IBLOCK_ID` int(11) NOT NULL" не соответствует описанию на диске "`IBLOCK_ID` int(18) NOT NULL"
+В таблице b_iblock_offers_tmp поле ID "`ID` int(10) unsigned NOT NULL auto_increment" не соответствует описанию на диске "`ID` int(11) unsigned NOT NULL auto_increment"
+В таблице b_iblock_offers_tmp поле PRODUCT_IBLOCK_ID "`PRODUCT_IBLOCK_ID` int(10) unsigned NOT NULL" не соответствует описанию на диске "`PRODUCT_IBLOCK_ID` int(11) unsigned NOT NULL"
+В таблице b_iblock_offers_tmp поле OFFERS_IBLOCK_ID "`OFFERS_IBLOCK_ID` int(10) unsigned NOT NULL" не соответствует описанию на диске "`OFFERS_IBLOCK_ID` int(11) unsigned NOT NULL"
+
+2020-Nov-26 13:08:35 Структура базы данных (check_mysql_table_structure): Ok
+96% done
+2020-Nov-26 13:08:35 Структура базы данных (check_mysql_table_structure): Fail
+ALTER TABLE `b_sec_iprule_incl_ip` CHANGE `IP_START` `IP_START` bigint(18) NULL DEFAULT NULL;
+ALTER TABLE `b_sec_iprule_incl_ip` CHANGE `IP_END` `IP_END` bigint(18) NULL DEFAULT NULL;
+ALTER TABLE `b_sec_iprule_excl_ip` CHANGE `IP_START` `IP_START` bigint(18) NULL DEFAULT NULL;
+ALTER TABLE `b_sec_iprule_excl_ip` CHANGE `IP_END` `IP_END` bigint(18) NULL DEFAULT NULL;
+ALTER TABLE `b_sec_user` CHANGE `ATTEMPTS` `ATTEMPTS` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_perf_component` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_perf_component` CHANGE `HIT_ID` `HIT_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_perf_component` CHANGE `NN` `NN` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_perf_sql` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_perf_sql` CHANGE `HIT_ID` `HIT_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_perf_sql` CHANGE `COMPONENT_ID` `COMPONENT_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_perf_sql` CHANGE `NN` `NN` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_perf_sql` CHANGE `NODE_ID` `NODE_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_perf_sql_backtrace` CHANGE `SQL_ID` `SQL_ID` int(18) NOT NULL;
+ALTER TABLE `b_perf_sql_backtrace` CHANGE `NN` `NN` int(18) NOT NULL;
+ALTER TABLE `b_perf_sql_backtrace` CHANGE `LINE_NO` `LINE_NO` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_perf_cache` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_perf_cache` CHANGE `HIT_ID` `HIT_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_perf_cache` CHANGE `COMPONENT_ID` `COMPONENT_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_perf_cache` CHANGE `NN` `NN` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_perf_error` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_perf_error` CHANGE `HIT_ID` `HIT_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_perf_error` CHANGE `ERRNO` `ERRNO` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_perf_error` CHANGE `ERRLINE` `ERRLINE` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_perf_test` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_perf_test` CHANGE `REFERENCE_ID` `REFERENCE_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_perf_cluster` CHANGE `TIMESTAMP_X` `TIMESTAMP_X` timestamp NOT NULL DEFAULT current_timestamp() on update current_timestamp();
+ALTER TABLE `b_perf_history` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_perf_history` CHANGE `TIMESTAMP_X` `TIMESTAMP_X` timestamp NOT NULL DEFAULT current_timestamp() on update current_timestamp();
+ALTER TABLE `b_messageservice_message` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_messageservice_message` CHANGE `AUTHOR_ID` `AUTHOR_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_messageservice_message` CHANGE `STATUS_ID` `STATUS_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_messageservice_rest_app` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_messageservice_rest_app` CHANGE `AUTHOR_ID` `AUTHOR_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_messageservice_rest_app_lang` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_messageservice_rest_app_lang` CHANGE `APP_ID` `APP_ID` int(18) NOT NULL;
+ALTER TABLE `b_forum` CHANGE `ID` `ID` int(10) NOT NULL auto_increment;
+ALTER TABLE `b_forum` CHANGE `SORT` `SORT` int(10) NOT NULL DEFAULT "150";
+ALTER TABLE `b_forum_topic` CHANGE `FORUM_ID` `FORUM_ID` int(10) NOT NULL;
+ALTER TABLE `b_forum_topic` CHANGE `SORT` `SORT` int(10) NOT NULL DEFAULT "150";
+ALTER TABLE `b_forum_topic` CHANGE `VIEWS` `VIEWS` int(10) NOT NULL DEFAULT "0";
+ALTER TABLE `b_forum_topic` CHANGE `USER_START_ID` `USER_START_ID` int(10) NULL DEFAULT NULL;
+ALTER TABLE `b_forum_topic` CHANGE `POSTS` `POSTS` int(10) NOT NULL DEFAULT "0";
+ALTER TABLE `b_forum_topic` CHANGE `LAST_POSTER_ID` `LAST_POSTER_ID` int(10) NULL DEFAULT NULL;
+ALTER TABLE `b_forum_topic` CHANGE `ABS_LAST_POSTER_ID` `ABS_LAST_POSTER_ID` int(10) NULL DEFAULT NULL;
+ALTER TABLE `b_forum_topic` CHANGE `SOCNET_GROUP_ID` `SOCNET_GROUP_ID` int(10) NULL DEFAULT NULL;
+ALTER TABLE `b_forum_topic` CHANGE `OWNER_ID` `OWNER_ID` int(10) NULL DEFAULT NULL;
+ALTER TABLE `b_forum_message` CHANGE `FORUM_ID` `FORUM_ID` int(10) NOT NULL;
+ALTER TABLE `b_forum_message` CHANGE `AUTHOR_ID` `AUTHOR_ID` int(10) NULL DEFAULT NULL;
+ALTER TABLE `b_forum_message` CHANGE `GUEST_ID` `GUEST_ID` int(10) NULL DEFAULT NULL;
+ALTER TABLE `b_forum_message` CHANGE `EDITOR_ID` `EDITOR_ID` int(10) NULL DEFAULT NULL;
+ALTER TABLE `b_forum_file` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_forum_file` CHANGE `FORUM_ID` `FORUM_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_forum_file` CHANGE `TOPIC_ID` `TOPIC_ID` int(20) NULL DEFAULT NULL;
+ALTER TABLE `b_forum_file` CHANGE `MESSAGE_ID` `MESSAGE_ID` int(20) NULL DEFAULT NULL;
+ALTER TABLE `b_forum_file` CHANGE `FILE_ID` `FILE_ID` int(18) NOT NULL;
+ALTER TABLE `b_forum_file` CHANGE `USER_ID` `USER_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_forum_file` CHANGE `HITS` `HITS` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_forum_user` CHANGE `ID` `ID` bigint(10) NOT NULL auto_increment;
+ALTER TABLE `b_forum_user` CHANGE `USER_ID` `USER_ID` int(10) NOT NULL;
+ALTER TABLE `b_forum_user` CHANGE `AVATAR` `AVATAR` int(10) NULL DEFAULT NULL;
+ALTER TABLE `b_forum_user` CHANGE `NUM_POSTS` `NUM_POSTS` int(10) NULL DEFAULT "0";
+ALTER TABLE `b_forum_user` CHANGE `LAST_POST` `LAST_POST` int(10) NULL DEFAULT NULL;
+ALTER TABLE `b_forum_subscribe` CHANGE `ID` `ID` int(10) NOT NULL auto_increment;
+ALTER TABLE `b_forum_subscribe` CHANGE `USER_ID` `USER_ID` int(10) NOT NULL;
+ALTER TABLE `b_forum_subscribe` CHANGE `FORUM_ID` `FORUM_ID` int(10) NOT NULL;
+ALTER TABLE `b_forum_subscribe` CHANGE `TOPIC_ID` `TOPIC_ID` int(10) NULL DEFAULT NULL;
+ALTER TABLE `b_forum_subscribe` CHANGE `LAST_SEND` `LAST_SEND` int(10) NULL DEFAULT NULL;
+ALTER TABLE `b_forum_private_message` CHANGE `ID` `ID` bigint(10) NOT NULL auto_increment;
+ALTER TABLE `b_forum_stat` CHANGE `USER_ID` `USER_ID` int(10) NULL DEFAULT NULL;
+ALTER TABLE `b_forum_stat` CHANGE `FORUM_ID` `FORUM_ID` smallint(5) NOT NULL DEFAULT "0";
+ALTER TABLE `b_forum_stat` CHANGE `TOPIC_ID` `TOPIC_ID` int(10) NULL DEFAULT NULL;
+ALTER TABLE `b_form` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_form` CHANGE `C_SORT` `C_SORT` int(18) NULL DEFAULT "100";
+ALTER TABLE `b_form` CHANGE `IMAGE_ID` `IMAGE_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_form` CHANGE `RESTRICT_USER` `RESTRICT_USER` int(5) NULL DEFAULT "0";
+ALTER TABLE `b_form` CHANGE `RESTRICT_TIME` `RESTRICT_TIME` int(10) NULL DEFAULT "0";
+ALTER TABLE `b_form_2_mail_template` CHANGE `FORM_ID` `FORM_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_form_2_mail_template` CHANGE `MAIL_TEMPLATE_ID` `MAIL_TEMPLATE_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_form_2_site` CHANGE `FORM_ID` `FORM_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_form_answer` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_form_answer` CHANGE `FIELD_ID` `FIELD_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_form_answer` CHANGE `C_SORT` `C_SORT` int(18) NOT NULL DEFAULT "100";
+ALTER TABLE `b_form_answer` CHANGE `FIELD_WIDTH` `FIELD_WIDTH` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_form_answer` CHANGE `FIELD_HEIGHT` `FIELD_HEIGHT` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_form_field` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_form_field` CHANGE `FORM_ID` `FORM_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_form_field` CHANGE `C_SORT` `C_SORT` int(18) NOT NULL DEFAULT "100";
+ALTER TABLE `b_form_field` CHANGE `IMAGE_ID` `IMAGE_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_form_field_filter` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_form_field_filter` CHANGE `FIELD_ID` `FIELD_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_form_field_validator` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_form_field_validator` CHANGE `FORM_ID` `FORM_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_form_field_validator` CHANGE `FIELD_ID` `FIELD_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_form_field_validator` CHANGE `C_SORT` `C_SORT` int(18) NULL DEFAULT "100";
+ALTER TABLE `b_form_menu` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_form_menu` CHANGE `FORM_ID` `FORM_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_form_result` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_form_result` CHANGE `STATUS_ID` `STATUS_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_form_result` CHANGE `FORM_ID` `FORM_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_form_result` CHANGE `USER_ID` `USER_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_form_result` CHANGE `STAT_GUEST_ID` `STAT_GUEST_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_form_result` CHANGE `STAT_SESSION_ID` `STAT_SESSION_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_form_result_answer` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_form_result_answer` CHANGE `RESULT_ID` `RESULT_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_form_result_answer` CHANGE `FORM_ID` `FORM_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_form_result_answer` CHANGE `FIELD_ID` `FIELD_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_form_result_answer` CHANGE `ANSWER_ID` `ANSWER_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_form_result_answer` CHANGE `USER_FILE_ID` `USER_FILE_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_form_result_answer` CHANGE `USER_FILE_SIZE` `USER_FILE_SIZE` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_form_2_group` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_form_2_group` CHANGE `FORM_ID` `FORM_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_form_2_group` CHANGE `GROUP_ID` `GROUP_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_form_2_group` CHANGE `PERMISSION` `PERMISSION` int(5) NOT NULL DEFAULT "1";
+ALTER TABLE `b_form_status` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_form_status` CHANGE `FORM_ID` `FORM_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_form_status` CHANGE `C_SORT` `C_SORT` int(18) NOT NULL DEFAULT "100";
+ALTER TABLE `b_form_status_2_group` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_form_status_2_group` CHANGE `STATUS_ID` `STATUS_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_form_status_2_group` CHANGE `GROUP_ID` `GROUP_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_form_status_2_mail_template` CHANGE `STATUS_ID` `STATUS_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_form_status_2_mail_template` CHANGE `MAIL_TEMPLATE_ID` `MAIL_TEMPLATE_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_form_crm` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_form_crm_link` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_form_crm_link` CHANGE `FORM_ID` `FORM_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_form_crm_link` CHANGE `CRM_ID` `CRM_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_form_crm_field` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_form_crm_field` CHANGE `LINK_ID` `LINK_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_form_crm_field` CHANGE `FIELD_ID` `FIELD_ID` int(18) NULL DEFAULT "0";
+ALTER TABLE `b_landing` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_landing` CHANGE `VIEWS` `VIEWS` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_landing` CHANGE `TPL_ID` `TPL_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_landing` CHANGE `SITE_ID` `SITE_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing` CHANGE `FOLDER_ID` `FOLDER_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_landing` CHANGE `VERSION` `VERSION` int(18) NOT NULL DEFAULT "1";
+ALTER TABLE `b_landing` CHANGE `CREATED_BY_ID` `CREATED_BY_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing` CHANGE `MODIFIED_BY_ID` `MODIFIED_BY_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_block` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_landing_block` CHANGE `PARENT_ID` `PARENT_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_landing_block` CHANGE `LID` `LID` int(18) NOT NULL;
+ALTER TABLE `b_landing_block` CHANGE `SORT` `SORT` int(18) NULL DEFAULT "500";
+ALTER TABLE `b_landing_block` CHANGE `CREATED_BY_ID` `CREATED_BY_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_block` CHANGE `MODIFIED_BY_ID` `MODIFIED_BY_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_site` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_landing_site` CHANGE `TPL_ID` `TPL_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_landing_site` CHANGE `DOMAIN_ID` `DOMAIN_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_site` CHANGE `LANDING_ID_INDEX` `LANDING_ID_INDEX` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_landing_site` CHANGE `LANDING_ID_404` `LANDING_ID_404` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_landing_site` CHANGE `LANDING_ID_503` `LANDING_ID_503` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_landing_site` CHANGE `CREATED_BY_ID` `CREATED_BY_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_site` CHANGE `MODIFIED_BY_ID` `MODIFIED_BY_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_domain` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_landing_domain` CHANGE `CREATED_BY_ID` `CREATED_BY_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_domain` CHANGE `MODIFIED_BY_ID` `MODIFIED_BY_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_template` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_landing_template` CHANGE `SORT` `SORT` int(18) NULL DEFAULT "100";
+ALTER TABLE `b_landing_template` CHANGE `AREA_COUNT` `AREA_COUNT` int(2) NOT NULL;
+ALTER TABLE `b_landing_template` CHANGE `CREATED_BY_ID` `CREATED_BY_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_template` CHANGE `MODIFIED_BY_ID` `MODIFIED_BY_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_template_ref` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_landing_template_ref` CHANGE `ENTITY_ID` `ENTITY_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_template_ref` CHANGE `AREA` `AREA` int(2) NOT NULL;
+ALTER TABLE `b_landing_template_ref` CHANGE `LANDING_ID` `LANDING_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_repo` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_landing_repo` CHANGE `CREATED_BY_ID` `CREATED_BY_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_repo` CHANGE `MODIFIED_BY_ID` `MODIFIED_BY_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_hook_data` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_landing_hook_data` CHANGE `ENTITY_ID` `ENTITY_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_file` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_landing_file` CHANGE `ENTITY_ID` `ENTITY_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_file` CHANGE `FILE_ID` `FILE_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_syspage` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_landing_syspage` CHANGE `SITE_ID` `SITE_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_syspage` CHANGE `LANDING_ID` `LANDING_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_demo` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_landing_demo` CHANGE `CREATED_BY_ID` `CREATED_BY_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_demo` CHANGE `MODIFIED_BY_ID` `MODIFIED_BY_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_placement` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_landing_placement` CHANGE `APP_ID` `APP_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_landing_placement` CHANGE `CREATED_BY_ID` `CREATED_BY_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_placement` CHANGE `MODIFIED_BY_ID` `MODIFIED_BY_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_update_block` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_landing_update_block` CHANGE `LAST_BLOCK_ID` `LAST_BLOCK_ID` int(18) NULL DEFAULT "0";
+ALTER TABLE `b_landing_update_block` CHANGE `CREATED_BY_ID` `CREATED_BY_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_update_block` CHANGE `MODIFIED_BY_ID` `MODIFIED_BY_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_urlrewrite` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_landing_urlrewrite` CHANGE `SITE_ID` `SITE_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_urlrewrite` CHANGE `LANDING_ID` `LANDING_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_urlrewrite` CHANGE `CREATED_BY_ID` `CREATED_BY_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_urlrewrite` CHANGE `MODIFIED_BY_ID` `MODIFIED_BY_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_entity_rights` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_landing_entity_rights` CHANGE `ENTITY_ID` `ENTITY_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_entity_rights` CHANGE `ROLE_ID` `ROLE_ID` int(18) NULL DEFAULT "0";
+ALTER TABLE `b_landing_role` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_landing_role` CHANGE `CREATED_BY_ID` `CREATED_BY_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_role` CHANGE `MODIFIED_BY_ID` `MODIFIED_BY_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_filter_entity` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_landing_filter_entity` CHANGE `CREATED_BY_ID` `CREATED_BY_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_filter_entity` CHANGE `MODIFIED_BY_ID` `MODIFIED_BY_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_filter_block` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_landing_filter_block` CHANGE `FILTER_ID` `FILTER_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_filter_block` CHANGE `BLOCK_ID` `BLOCK_ID` int(18) NOT NULL;
+CREATE INDEX `IX_B_FILTER_ID` ON `b_landing_filter_block` (filter_id);
+ALTER TABLE `b_landing_view` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_landing_view` CHANGE `LID` `LID` int(18) NOT NULL;
+ALTER TABLE `b_landing_view` CHANGE `USER_ID` `USER_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_view` CHANGE `VIEWS` `VIEWS` int(18) NOT NULL;
+ALTER TABLE `b_landing_binding` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_landing_binding` CHANGE `ENTITY_ID` `ENTITY_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_chat` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_landing_chat` CHANGE `CHAT_ID` `CHAT_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_chat` CHANGE `AVATAR` `AVATAR` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_landing_chat` CHANGE `CREATED_BY_ID` `CREATED_BY_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_chat` CHANGE `MODIFIED_BY_ID` `MODIFIED_BY_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_chat_binding` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_landing_chat_binding` CHANGE `INTERNAL_CHAT_ID` `INTERNAL_CHAT_ID` int(18) NOT NULL;
+ALTER TABLE `b_landing_chat_binding` CHANGE `ENTITY_ID` `ENTITY_ID` int(18) NOT NULL;
+ALTER TABLE `b_rest_event_offline` CHANGE `ERROR` `ERROR` int(3) NULL DEFAULT "0";
+ALTER TABLE `b_clouds_copy_queue` CHANGE `ID` `ID` int(32) NOT NULL auto_increment;
+ALTER TABLE `b_clouds_delete_queue` CHANGE `ID` `ID` int(32) NOT NULL auto_increment;
+ALTER TABLE `b_clouds_file_save` CHANGE `ID` `ID` int(32) NOT NULL auto_increment;
+ALTER TABLE `b_sticker` CHANGE `MODIFIED_BY` `MODIFIED_BY` int(18) NOT NULL;
+ALTER TABLE `b_sticker` CHANGE `CREATED_BY` `CREATED_BY` int(18) NOT NULL;
+ALTER TABLE `b_translate_path` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_translate_path` CHANGE `PARENT_ID` `PARENT_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_translate_path` CHANGE `DEPTH_LEVEL` `DEPTH_LEVEL` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_translate_path` CHANGE `SORT` `SORT` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_translate_path_lang` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_translate_file` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_translate_file` CHANGE `PATH_ID` `PATH_ID` int(18) NOT NULL;
+ALTER TABLE `b_translate_file` CHANGE `PHRASE_COUNT` `PHRASE_COUNT` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_translate_phrase` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_translate_phrase` CHANGE `FILE_ID` `FILE_ID` int(18) NOT NULL;
+ALTER TABLE `b_translate_phrase` CHANGE `PATH_ID` `PATH_ID` int(18) NOT NULL;
+ALTER TABLE `b_translate_diff` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_translate_diff` CHANGE `FILE_ID` `FILE_ID` int(18) NOT NULL;
+ALTER TABLE `b_translate_diff` CHANGE `PATH_ID` `PATH_ID` int(18) NOT NULL;
+ALTER TABLE `b_translate_diff` CHANGE `EXCESS_COUNT` `EXCESS_COUNT` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_translate_diff` CHANGE `DEFICIENCY_COUNT` `DEFICIENCY_COUNT` int(18) NULL DEFAULT "0";
+ALTER TABLE `b_translate_path_tree` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_translate_path_tree` CHANGE `PARENT_ID` `PARENT_ID` int(18) NOT NULL;
+ALTER TABLE `b_translate_path_tree` CHANGE `PATH_ID` `PATH_ID` int(18) NOT NULL;
+ALTER TABLE `b_translate_path_tree` CHANGE `DEPTH_LEVEL` `DEPTH_LEVEL` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_vote_channel` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_vote_channel` CHANGE `C_SORT` `C_SORT` int(18) NULL DEFAULT "100";
+ALTER TABLE `b_vote_channel_2_group` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_vote_channel_2_group` CHANGE `CHANNEL_ID` `CHANNEL_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_vote_channel_2_group` CHANGE `GROUP_ID` `GROUP_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_vote_channel_2_group` CHANGE `PERMISSION` `PERMISSION` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_vote_channel_2_site` CHANGE `CHANNEL_ID` `CHANNEL_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_vote` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_vote` CHANGE `CHANNEL_ID` `CHANNEL_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_vote` CHANGE `C_SORT` `C_SORT` int(18) NULL DEFAULT "100";
+ALTER TABLE `b_vote` CHANGE `AUTHOR_ID` `AUTHOR_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_vote` CHANGE `IMAGE_ID` `IMAGE_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_vote` CHANGE `UNIQUE_TYPE` `UNIQUE_TYPE` int(18) NOT NULL DEFAULT "2";
+ALTER TABLE `b_vote` CHANGE `KEEP_IP_SEC` `KEEP_IP_SEC` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_vote` CHANGE `OPTIONS` `OPTIONS` int(18) NULL DEFAULT "1";
+ALTER TABLE `b_vote_question` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_vote_question` CHANGE `VOTE_ID` `VOTE_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_vote_question` CHANGE `C_SORT` `C_SORT` int(18) NULL DEFAULT "100";
+ALTER TABLE `b_vote_question` CHANGE `IMAGE_ID` `IMAGE_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_vote_question` CHANGE `FIELD_TYPE` `FIELD_TYPE` int(5) NOT NULL DEFAULT "0";
+ALTER TABLE `b_vote_answer` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_vote_answer` CHANGE `QUESTION_ID` `QUESTION_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_vote_answer` CHANGE `C_SORT` `C_SORT` int(18) NULL DEFAULT "100";
+ALTER TABLE `b_vote_answer` CHANGE `IMAGE_ID` `IMAGE_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_vote_answer` CHANGE `COUNTER` `COUNTER` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_vote_answer` CHANGE `FIELD_TYPE` `FIELD_TYPE` int(5) NOT NULL DEFAULT "0";
+ALTER TABLE `b_vote_answer` CHANGE `FIELD_WIDTH` `FIELD_WIDTH` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_vote_answer` CHANGE `FIELD_HEIGHT` `FIELD_HEIGHT` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_vote_event` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_vote_event` CHANGE `VOTE_ID` `VOTE_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_vote_event` CHANGE `VOTE_USER_ID` `VOTE_USER_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_vote_event` CHANGE `STAT_SESSION_ID` `STAT_SESSION_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_vote_event_question` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_vote_event_question` CHANGE `EVENT_ID` `EVENT_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_vote_event_question` CHANGE `QUESTION_ID` `QUESTION_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_vote_event_answer` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_vote_event_answer` CHANGE `EVENT_QUESTION_ID` `EVENT_QUESTION_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_vote_event_answer` CHANGE `ANSWER_ID` `ANSWER_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_vote_user` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_vote_user` CHANGE `COOKIE_ID` `COOKIE_ID` int(18) NOT NULL;
+ALTER TABLE `b_vote_user` CHANGE `AUTH_USER_ID` `AUTH_USER_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_vote_user` CHANGE `COUNTER` `COUNTER` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_vote_user` CHANGE `STAT_GUEST_ID` `STAT_GUEST_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_seo_search_engine` CHANGE `SORT` `SORT` int(5) NULL DEFAULT "100";
+ALTER TABLE `b_seo_sitemap` CHANGE `TIMESTAMP_X` `TIMESTAMP_X` timestamp NOT NULL DEFAULT current_timestamp() on update current_timestamp();
+ALTER TABLE `b_seo_adv_link` CHANGE `LINK_ID` `LINK_ID` int(18) NOT NULL;
+ALTER TABLE `b_seo_adv_log` CHANGE `RESPONSE_STATUS` `RESPONSE_STATUS` int(5) NULL DEFAULT NULL;
+ALTER TABLE `b_seo_yandex_direct_stat` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_seo_yandex_direct_stat` CHANGE `CLICKS` `CLICKS` int(7) NULL DEFAULT "0";
+ALTER TABLE `b_seo_yandex_direct_stat` CHANGE `CLICKS_SEARCH` `CLICKS_SEARCH` int(7) NULL DEFAULT "0";
+ALTER TABLE `b_seo_yandex_direct_stat` CHANGE `CLICKS_CONTEXT` `CLICKS_CONTEXT` int(7) NULL DEFAULT "0";
+ALTER TABLE `b_seo_yandex_direct_stat` CHANGE `SHOWS` `SHOWS` int(7) NULL DEFAULT "0";
+ALTER TABLE `b_seo_yandex_direct_stat` CHANGE `SHOWS_SEARCH` `SHOWS_SEARCH` int(7) NULL DEFAULT "0";
+ALTER TABLE `b_seo_yandex_direct_stat` CHANGE `SHOWS_CONTEXT` `SHOWS_CONTEXT` int(7) NULL DEFAULT "0";
+ALTER TABLE `b_lang` CHANGE `SORT` `SORT` int(18) NOT NULL DEFAULT "100";
+ALTER TABLE `b_culture` CHANGE `WEEK_START` `WEEK_START` int(1) NULL DEFAULT "1";
+ALTER TABLE `b_culture` CHANGE `DAY_MONTH_FORMAT` `DAY_MONTH_FORMAT` varchar(50) NULL DEFAULT "F j";
+ALTER TABLE `b_event_type` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_event_type` CHANGE `SORT` `SORT` int(18) NOT NULL DEFAULT "150";
+ALTER TABLE `b_event_message` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_event_message` CHANGE `TIMESTAMP_X` `TIMESTAMP_X` timestamp NOT NULL DEFAULT current_timestamp() on update current_timestamp();
+ALTER TABLE `b_event_attachment` CHANGE `EVENT_ID` `EVENT_ID` int(18) NOT NULL;
+ALTER TABLE `b_event_attachment` CHANGE `FILE_ID` `FILE_ID` int(18) NOT NULL;
+ALTER TABLE `b_event_message_attachment` CHANGE `EVENT_MESSAGE_ID` `EVENT_MESSAGE_ID` int(18) NOT NULL;
+ALTER TABLE `b_event_message_attachment` CHANGE `FILE_ID` `FILE_ID` int(18) NOT NULL;
+ALTER TABLE `b_event` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_event` CHANGE `MESSAGE_ID` `MESSAGE_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_group` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_group` CHANGE `TIMESTAMP_X` `TIMESTAMP_X` timestamp NOT NULL DEFAULT current_timestamp() on update current_timestamp();
+ALTER TABLE `b_group` CHANGE `C_SORT` `C_SORT` int(18) NOT NULL DEFAULT "100";
+ALTER TABLE `b_user` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_user` CHANGE `TIMESTAMP_X` `TIMESTAMP_X` timestamp NOT NULL DEFAULT current_timestamp() on update current_timestamp();
+ALTER TABLE `b_user` CHANGE `PERSONAL_PHOTO` `PERSONAL_PHOTO` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_user` CHANGE `WORK_LOGO` `WORK_LOGO` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_user` CHANGE `LOGIN_ATTEMPTS` `LOGIN_ATTEMPTS` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_user` CHANGE `TIME_ZONE_OFFSET` `TIME_ZONE_OFFSET` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_user_group` CHANGE `USER_ID` `USER_ID` int(18) NOT NULL;
+ALTER TABLE `b_user_group` CHANGE `GROUP_ID` `GROUP_ID` int(18) NOT NULL;
+ALTER TABLE `b_user_field_confirm` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_user_field_confirm` CHANGE `USER_ID` `USER_ID` int(18) NOT NULL;
+ALTER TABLE `b_user_field_confirm` CHANGE `DATE_CHANGE` `DATE_CHANGE` timestamp NOT NULL DEFAULT current_timestamp() on update current_timestamp();
+ALTER TABLE `b_user_field_confirm` CHANGE `ATTEMPTS` `ATTEMPTS` int(18) NULL DEFAULT "0";
+ALTER TABLE `b_module` CHANGE `DATE_ACTIVE` `DATE_ACTIVE` timestamp NOT NULL DEFAULT current_timestamp() on update current_timestamp();
+ALTER TABLE `b_module_to_module` CHANGE `TIMESTAMP_X` `TIMESTAMP_X` timestamp NOT NULL DEFAULT current_timestamp() on update current_timestamp();
+ALTER TABLE `b_module_to_module` CHANGE `SORT` `SORT` int(18) NOT NULL DEFAULT "100";
+ALTER TABLE `b_module_to_module` CHANGE `VERSION` `VERSION` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_agent` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_agent` CHANGE `SORT` `SORT` int(18) NOT NULL DEFAULT "100";
+ALTER TABLE `b_agent` CHANGE `AGENT_INTERVAL` `AGENT_INTERVAL` int(18) NULL DEFAULT "86400";
+ALTER TABLE `b_agent` CHANGE `USER_ID` `USER_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_file` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_file` CHANGE `TIMESTAMP_X` `TIMESTAMP_X` timestamp NOT NULL DEFAULT current_timestamp() on update current_timestamp();
+ALTER TABLE `b_file` CHANGE `HEIGHT` `HEIGHT` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_file` CHANGE `WIDTH` `WIDTH` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_file_preview` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_file_preview` CHANGE `FILE_ID` `FILE_ID` int(18) NOT NULL;
+ALTER TABLE `b_file_preview` CHANGE `PREVIEW_ID` `PREVIEW_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_file_preview` CHANGE `PREVIEW_IMAGE_ID` `PREVIEW_IMAGE_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_favorite` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_favorite` CHANGE `C_SORT` `C_SORT` int(18) NOT NULL DEFAULT "100";
+ALTER TABLE `b_favorite` CHANGE `MODIFIED_BY` `MODIFIED_BY` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_favorite` CHANGE `CREATED_BY` `CREATED_BY` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_favorite` CHANGE `CODE_ID` `CODE_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_user_stored_auth` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_user_stored_auth` CHANGE `USER_ID` `USER_ID` int(18) NOT NULL;
+ALTER TABLE `b_task` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_group_task` CHANGE `GROUP_ID` `GROUP_ID` int(18) NOT NULL;
+ALTER TABLE `b_group_task` CHANGE `TASK_ID` `TASK_ID` int(18) NOT NULL;
+ALTER TABLE `b_operation` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_task_operation` CHANGE `TASK_ID` `TASK_ID` int(18) NOT NULL;
+ALTER TABLE `b_task_operation` CHANGE `OPERATION_ID` `OPERATION_ID` int(18) NOT NULL;
+ALTER TABLE `b_group_subordinate` CHANGE `ID` `ID` int(18) NOT NULL;
+ALTER TABLE `b_event_log` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_event_log` CHANGE `TIMESTAMP_X` `TIMESTAMP_X` timestamp NOT NULL DEFAULT current_timestamp() on update current_timestamp();
+ALTER TABLE `b_event_log` CHANGE `USER_ID` `USER_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_event_log` CHANGE `GUEST_ID` `GUEST_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_user_hit_auth` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_user_hit_auth` CHANGE `USER_ID` `USER_ID` int(18) NOT NULL;
+ALTER TABLE `b_user_hit_auth` CHANGE `TIMESTAMP_X` `TIMESTAMP_X` timestamp NOT NULL DEFAULT current_timestamp() on update current_timestamp();
+ALTER TABLE `b_short_uri` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_short_uri` CHANGE `URI_CRC` `URI_CRC` int(18) NOT NULL;
+ALTER TABLE `b_short_uri` CHANGE `SHORT_URI_CRC` `SHORT_URI_CRC` int(18) NOT NULL;
+ALTER TABLE `b_short_uri` CHANGE `STATUS` `STATUS` int(18) NOT NULL DEFAULT "301";
+ALTER TABLE `b_short_uri` CHANGE `NUMBER_USED` `NUMBER_USED` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_user_counter` CHANGE `USER_ID` `USER_ID` int(18) NOT NULL;
+ALTER TABLE `b_user_counter` CHANGE `CNT` `CNT` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_hot_keys_code` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_hot_keys` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_hot_keys` CHANGE `CODE_ID` `CODE_ID` int(18) NOT NULL;
+ALTER TABLE `b_hot_keys` CHANGE `USER_ID` `USER_ID` int(18) NOT NULL;
+ALTER TABLE `b_admin_notify` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_admin_notify_lang` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_admin_notify_lang` CHANGE `NOTIFY_ID` `NOTIFY_ID` int(18) NOT NULL;
+ALTER TABLE `b_filters` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_filters` CHANGE `USER_ID` `USER_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_filters` CHANGE `SORT` `SORT` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_smile` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_smile` CHANGE `SET_ID` `SET_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_smile` CHANGE `SORT` `SORT` int(10) NOT NULL DEFAULT "150";
+ALTER TABLE `b_smile_set` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_smile_set` CHANGE `PARENT_ID` `PARENT_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_smile_set` CHANGE `SORT` `SORT` int(10) NOT NULL DEFAULT "150";
+ALTER TABLE `b_smile_lang` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_geoip_handlers` CHANGE `SORT` `SORT` int(10) NOT NULL DEFAULT "100";
+ALTER TABLE `b_consent_user_consent` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_consent_user_consent` CHANGE `AGREEMENT_ID` `AGREEMENT_ID` int(18) NOT NULL;
+ALTER TABLE `b_consent_user_consent` CHANGE `USER_ID` `USER_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_consent_agreement` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_consent_field` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_consent_field` CHANGE `AGREEMENT_ID` `AGREEMENT_ID` int(18) NOT NULL;
+ALTER TABLE `b_consent_user_consent_item` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_consent_user_consent_item` CHANGE `USER_CONSENT_ID` `USER_CONSENT_ID` int(18) NOT NULL;
+ALTER TABLE `b_composite_page` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_composite_page` CHANGE `VIEWS` `VIEWS` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_composite_page` CHANGE `REWRITES` `REWRITES` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_composite_page` CHANGE `SIZE` `SIZE` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_composite_log` CHANGE `ID` `ID` int(18) NOT NULL auto_increment;
+ALTER TABLE `b_composite_log` CHANGE `USER_ID` `USER_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_composite_log` CHANGE `PAGE_ID` `PAGE_ID` int(18) NOT NULL DEFAULT "0";
+ALTER TABLE `b_search_content_site` CHANGE `SEARCH_CONTENT_ID` `SEARCH_CONTENT_ID` int(18) NOT NULL;
+ALTER TABLE `b_hlblock_entity` CHANGE `ID` `ID` int(11) unsigned NOT NULL auto_increment;
+ALTER TABLE `b_hlblock_entity_lang` CHANGE `ID` `ID` int(11) unsigned NOT NULL;
+ALTER TABLE `b_hlblock_entity_rights` CHANGE `ID` `ID` int(11) unsigned NOT NULL auto_increment;
+ALTER TABLE `b_hlblock_entity_rights` CHANGE `HL_ID` `HL_ID` int(11) unsigned NOT NULL;
+ALTER TABLE `b_hlblock_entity_rights` CHANGE `TASK_ID` `TASK_ID` int(11) unsigned NOT NULL;
+ALTER TABLE `b_iblock_type` CHANGE `SORT` `SORT` int(18) NOT NULL DEFAULT "500";
+ALTER TABLE `b_iblock` CHANGE `PICTURE` `PICTURE` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_iblock` CHANGE `SOCNET_GROUP_ID` `SOCNET_GROUP_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_iblock_site` CHANGE `IBLOCK_ID` `IBLOCK_ID` int(18) NOT NULL;
+ALTER TABLE `b_iblock_messages` CHANGE `IBLOCK_ID` `IBLOCK_ID` int(18) NOT NULL;
+ALTER TABLE `b_iblock_fields` CHANGE `IBLOCK_ID` `IBLOCK_ID` int(18) NOT NULL;
+ALTER TABLE `b_iblock_property` CHANGE `LINK_IBLOCK_ID` `LINK_IBLOCK_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_iblock_section` CHANGE `MODIFIED_BY` `MODIFIED_BY` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_iblock_section` CHANGE `CREATED_BY` `CREATED_BY` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_iblock_section` CHANGE `PICTURE` `PICTURE` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_iblock_section` CHANGE `LEFT_MARGIN` `LEFT_MARGIN` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_iblock_section` CHANGE `RIGHT_MARGIN` `RIGHT_MARGIN` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_iblock_section` CHANGE `DEPTH_LEVEL` `DEPTH_LEVEL` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_iblock_section` CHANGE `DETAIL_PICTURE` `DETAIL_PICTURE` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_iblock_section` CHANGE `SOCNET_GROUP_ID` `SOCNET_GROUP_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_iblock_element` CHANGE `MODIFIED_BY` `MODIFIED_BY` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_iblock_element` CHANGE `CREATED_BY` `CREATED_BY` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_iblock_element` CHANGE `PREVIEW_PICTURE` `PREVIEW_PICTURE` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_iblock_element` CHANGE `DETAIL_PICTURE` `DETAIL_PICTURE` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_iblock_element` CHANGE `WF_STATUS_ID` `WF_STATUS_ID` int(18) NULL DEFAULT "1";
+ALTER TABLE `b_iblock_element` CHANGE `WF_LOCKED_BY` `WF_LOCKED_BY` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_iblock_element` CHANGE `SHOW_COUNTER` `SHOW_COUNTER` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_iblock_section_element` CHANGE `ADDITIONAL_PROPERTY_ID` `ADDITIONAL_PROPERTY_ID` int(18) NULL DEFAULT NULL;
+ALTER TABLE `b_iblock_sequence` CHANGE `IBLOCK_ID` `IBLOCK_ID` int(18) NOT NULL;
+ALTER TABLE `b_iblock_offers_tmp` CHANGE `ID` `ID` int(11) unsigned NOT NULL auto_increment;
+ALTER TABLE `b_iblock_offers_tmp` CHANGE `PRODUCT_IBLOCK_ID` `PRODUCT_IBLOCK_ID` int(11) unsigned NOT NULL;
+ALTER TABLE `b_iblock_offers_tmp` CHANGE `OFFERS_IBLOCK_ID` `OFFERS_IBLOCK_ID` int(11) unsigned NOT NULL;
+Ошибка! Структура базы данных имеет ошибки. Всего 435, автоматически могут быть исправлены: 382. Исправить

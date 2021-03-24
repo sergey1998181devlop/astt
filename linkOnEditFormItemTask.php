@@ -1,0 +1,3 @@
+<?/*     <a
+                                                    data-href="<?= ($item['UF_STATUS'] == 1) ? SITE_DIR . 'user/items/' . $item['UF_IBLOCK_ID'] . '-' . $item['UF_ITEM_ID'] . '/' : SITE_DIR . $item['UF_IBLOCK_TYPE'] . '/' . $item['UF_IBLOCK_CODE'] . '/' . $item['UF_CODE'] . '/' ?>"
+                                                class="item" id="<?= $this->GetEditAreaId($item['UF_ITEM_ID']) ?>"> */?>

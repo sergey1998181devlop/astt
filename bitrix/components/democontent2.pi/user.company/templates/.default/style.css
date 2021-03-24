@@ -1,0 +1,21 @@
+.alert-success-error {
+    border: 1px solid #a80202;
+    background-color: rgba(145,200,75,.6);
+    border-color: #91c84b;
+    color: #75a933;
+    overflow: hidden;
+    padding: 15px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+.listReason .refusal_app_form {
+    padding: 0px 0px 0px 18px;
+    margin-top: 25px;
+}
+.alert-success-error {
+    color: #75a933;
+}
+.listReason .refusal_app_form li {
+    list-style: decimal;
+    margin-top: 6px;
+}

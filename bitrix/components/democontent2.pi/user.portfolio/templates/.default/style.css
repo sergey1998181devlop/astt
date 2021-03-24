@@ -1,0 +1,188 @@
+.portfolio-category {
+  padding: 0 0 0 25px;
+}
+.portfolio-category  .remove {
+  color: red;
+  display: inline-block;
+  border: none;
+  vertical-align: top;
+  position: relative;
+  top: 3px;
+}
+.add-category .tbl .tbc {
+  width: 152px;
+}
+.add-category .tbl .tbc .btn {
+  border-radius: 0 4px 4px 0;
+}
+.add-category .tbl .tbc .form-control {
+  border-radius: 4px 0 0 4px;
+}
+.add-category .tbl .tbc:first-child {
+  width: auto;
+}
+.portfolio-category  .remove .icon {
+  width: 14px;
+  height: 14px;
+  display: block;
+}
+.dropzone-files-hidden{
+  display:none;
+}
+
+.dropzone.dz-clickable {
+  border-style: dashed;
+  position: relative;
+  -webkit-transition: all .3s ease 0s;
+  -o-transition: all .3s ease 0s;
+  transition: all .3s ease 0s
+}
+
+.dropzone.dz-clickable:hover {
+  background-color: rgba(255, 152, 0, .5)
+}
+
+.dropzone.dz-clickable .dz-message {
+  -webkit-transition: all .3s ease 0s;
+  -o-transition: all .3s ease 0s;
+  transition: all .3s ease 0s
+}
+
+.dropzone.dz-clickable.dz-max-files-reached {
+  border-color: #C9343A
+}
+
+.dropzone.dz-clickable.dz-max-files-reached>.dz-message {
+  visibility: hidden;
+  opacity: 0
+}
+
+.dropzone.dz-clickable.dz-max-files-reached .limit {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  visibility: visible;
+  opacity: 1
+}
+
+.dropzone.dz-clickable .limit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(201, 52, 58, .5);
+  cursor: default;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all .3s ease 0s;
+  -o-transition: all .3s ease 0s;
+  transition: all .3s ease 0s
+}
+
+.files-previews {
+  margin: 0 -5px
+}
+
+.files-previews .preview-pict-ttl {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, .5);
+  overflow: hidden;
+  color: #FFF;
+  padding: 5px 15px 5px 5px;
+  font-size: 12px;
+  line-height: 15px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.files-previews .preview-pict-ttl .icon {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+}
+
+.files-previews .preview-pict {
+  position: relative;
+  float: left;
+  padding: 5px;
+  width: 20%;
+  cursor: move
+}
+
+@media only screen and (max-width:767px) {
+  .files-previews {
+    margin: 0 -2.5px
+  }
+
+  .files-previews .preview-pict {
+    width: 50%
+  }
+
+}
+
+.files-previews .preview-pict:hover a.remove {
+  visibility: visible;
+  opacity: 1
+}
+
+.files-previews .preview-pict .uploadedPreview {
+  position: relative
+}
+
+.files-previews .preview-pict a.remove {
+  background: rgba(0, 0, 0, .5);
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  padding: 10px;
+  text-align: right
+}
+
+.files-previews .preview-pict a.remove .icon {
+  font-size: 20px;
+  fill: #C9343A
+}
+
+.files-previews .preview-pict .object-fit-container {
+  padding-top: 100%;
+  width: 100%
+}
+
+.files-previews .preview-pict .object-fit-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: 50% 50%;
+  object-position: 50% 50%;
+  width: 100%;
+  height: 100%
+}
+#dropzone-files-hidden__files {
+  display: none;
+}
+.popup-pict-title {
+  width: 400px;
+}

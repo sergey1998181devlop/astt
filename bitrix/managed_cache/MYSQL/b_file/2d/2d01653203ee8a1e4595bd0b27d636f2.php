@@ -1,0 +1,7 @@
+<?
+if($INCLUDE_FROM_CACHE!='Y')return false;
+$datecreate = '001616072440';
+$dateexpire = '001616076040';
+$ser_content = 'a:2:{s:7:"CONTENT";s:0:"";s:4:"VARS";a:2:{i:4;a:14:{s:2:"ID";s:1:"4";s:11:"TIMESTAMP_X";O:25:"Bitrix\\Main\\Type\\DateTime":1:{s:8:"'.chr(0).'*'.chr(0).'value";O:8:"DateTime":3:{s:4:"date";s:26:"2020-09-10 14:28:31.000000";s:13:"timezone_type";i:3;s:8:"timezone";s:12:"Asia/Baghdad";}}s:9:"MODULE_ID";s:5:"forum";s:6:"HEIGHT";s:3:"100";s:5:"WIDTH";s:2:"80";s:9:"FILE_SIZE";s:4:"4304";s:12:"CONTENT_TYPE";s:10:"image/jpeg";s:6:"SUBDIR";s:16:"forum/avatar/f7f";s:9:"FILE_NAME";s:36:"ccc3f8c6e7576cb22b708c93a2b696bf.jpg";s:13:"ORIGINAL_NAME";s:36:"ccc3f8c6e7576cb22b708c93a2b696bf.jpg";s:11:"DESCRIPTION";s:0:"";s:10:"HANDLER_ID";N;s:11:"EXTERNAL_ID";s:32:"98cb7ee790dbf61ecd6f98df7f5c4dd5";s:4:"~src";b:0;}i:6;a:14:{s:2:"ID";s:1:"6";s:11:"TIMESTAMP_X";O:25:"Bitrix\\Main\\Type\\DateTime":1:{s:8:"'.chr(0).'*'.chr(0).'value";O:8:"DateTime":3:{s:4:"date";s:26:"2020-09-13 11:51:21.000000";s:13:"timezone_type";i:3;s:8:"timezone";s:12:"Asia/Baghdad";}}s:9:"MODULE_ID";s:5:"forum";s:6:"HEIGHT";s:3:"100";s:5:"WIDTH";s:3:"100";s:9:"FILE_SIZE";s:4:"4086";s:12:"CONTENT_TYPE";s:10:"image/jpeg";s:6:"SUBDIR";s:16:"forum/avatar/ad7";s:9:"FILE_NAME";s:36:"39a4aa5a3a159e7297ca85ec9e9fbd5f.jpg";s:13:"ORIGINAL_NAME";s:36:"39a4aa5a3a159e7297ca85ec9e9fbd5f.jpg";s:11:"DESCRIPTION";s:0:"";s:10:"HANDLER_ID";N;s:11:"EXTERNAL_ID";s:32:"3ae9c4720d4101c47859a822b62fda5e";s:4:"~src";b:0;}}}';
+return true;
+?>

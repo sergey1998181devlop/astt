@@ -1,0 +1,5 @@
+<?
+$sSectionName = "#RECOMENDS#";
+$arDirProperties = array(
+);
+?>

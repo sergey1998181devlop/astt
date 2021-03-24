@@ -1,0 +1,68 @@
+.adding-job label[for="create-inp3"], .adding-job .contract-inp + label {
+    display: block;
+    /*margin-top: 33px;*/
+}
+
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
+    border: 1px solid #c5c5c5;
+}
+#properties label {
+    height: 47px;
+}
+
+.adding-job .datepicker-wrap {
+    position: relative;
+}
+
+.adding-job .tips {
+    font-size: 12px;
+    line-height: 15px;
+    padding-top: 5px;
+}
+
+.adding-job .form-group .time {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 80px;
+    border: 1px solid transparent;
+    background: transparent;
+}
+
+.route-remove {
+    display: inline-block;
+}
+
+.route-remove img {
+    width: .5rem;
+    height: .5rem;
+    margin-left: .3rem;
+}
+
+.route-remove:hover {
+    cursor: pointer;
+}
+
+.route-address-text {
+    position: relative;
+    display: inline-block;
+    font-size: .9rem;
+    padding-left: 5px;
+}
+
+.route-position {
+    position: relative;
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background: #000;
+    border-radius: 50%;
+    color: #fff;
+    font-size: .7rem;
+    text-align: center;
+    padding-top: 1px;
+}
+
+.route-address {
+    padding: .3rem;
+}

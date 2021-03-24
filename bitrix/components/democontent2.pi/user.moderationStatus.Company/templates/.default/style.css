@@ -1,0 +1,54 @@
+.moderation{display:flex;margin-top:1rem}.moderation>form{flex:1;margin:.3rem}.moderation-approve,.moderation-rejected{width:100%;text-align:center;color:#fff;padding:.3rem;border:none;border-radius:.3rem}.moderation-approve:hover,.moderation-rejected:hover{cursor:pointer}.moderation-approve{background:#00a827}.moderation-rejected{background:red}.complain{width:3rem;height:3rem;position:absolute;right:.3rem;top:0;overflow:hidden}.complain-item{position:absolute;right:-1.5rem;top:-1.5rem;width:3rem;height:3rem;background:#f3f3f3;line-height:3rem;transform:rotate(45deg);-ms-transform:rotate(45deg);-moz-transform:rotate(45deg);z-index:11}.complain-item>span{position:absolute;-ms-transform:rotate(-45deg);-moz-transform:rotate(-45deg);transform:rotate(-45deg);top:.9rem;right:1.2rem;color:#cbcbcb;font-weight:bold;font-size:.9rem}.complain-item:hover{cursor:pointer;background:red;-webkit-transition:background-color 250ms linear;transition:background-color 250ms linear}.complain-item:hover>span{color:#fff}.contacts-open{margin-top:1rem;width:100%}.contacts-view{margin-top:1rem;width:100%}.contacts-view>a{width:100%}.contacts-error{margin-top:1rem;text-align:center}/*# sourceMappingURL=style.css.map */
+
+.popup-back-task .tabs-head ul li{
+    list-style-type: none;
+    text-align: center;
+}
+.popup-back-task .tabs-head ul{
+    width: inherit;
+    padding: 0px;
+    text-align: center;
+    list-style-type: none;
+}
+.popup.popup-back-task {
+    width: 420px;
+    padding: 0;
+    display: inline-block;
+}
+
+
+.popup-back-task .tabs-head ul li.active a {
+    background: #FFF;
+    text-align: center;
+}
+.popup-back-task .tabs-head ul li a {
+    display: block;
+    padding: 10px 15px;
+    font-size: 16px;
+    line-height: 20px;
+    border: none;
+    color: inherit;
+    font-weight: 600;
+}
+.moderation > a{
+    flex: 1;
+    margin: .3rem;
+}
+.alert-success{
+    margin-top: 10px;
+}
+.span-star{
+    width: 15px;
+    height: 15px;
+    margin: 7px 7px 0px 0px;
+}
+.span-star svg{
+    /*fill: #ffe900;*/
+}
+complain-item{
+    background: #f3f3f3;
+}
+complain-item:hover{
+    background: #91c84b;
+}
+.popup-back-company .tabs-head ul li.active a

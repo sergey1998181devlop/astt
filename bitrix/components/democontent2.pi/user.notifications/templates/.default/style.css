@@ -1,0 +1,7 @@
+.notifications-container .item {
+  border-top: 1px solid  #EDEDED;
+  padding: 10px 0;
+}
+.notifications-container .item:first-child {
+  border-top: none;
+}

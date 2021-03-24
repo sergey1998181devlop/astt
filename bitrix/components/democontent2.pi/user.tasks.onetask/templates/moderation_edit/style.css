@@ -1,0 +1,100 @@
+.checklist-area {
+    margin-top: 1rem;
+}
+
+.checklist-value {
+    font-size: .9rem;
+    color: #949494;
+}
+
+.checklist-value > .icon_checkmark {
+    width: .9rem;
+    height: .9rem;
+    fill: #00a827;
+}
+
+.checklist-tag {
+    font-size: .8rem;
+    color: #fff;
+    display: inline-block;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+    background-color: #cbcbcb;
+    border-radius: .3rem;
+}
+
+.checklist-tag:not(:last-child) {
+    margin-right: .4rem;
+}
+
+.checklist-tag:hover {
+    cursor: pointer;
+    background-color: #949494;
+}
+
+.checklist-tag.active {
+    background-color: #1DA1F2;
+}
+
+.responses-preview.hidden {
+    display: none;
+}
+.moderation{display:flex;margin-top:1rem}.moderation>form{flex:1;margin:.3rem}.moderation-approve,.moderation-rejected{width:100%;text-align:center;color:#fff;padding:.3rem;border:none;border-radius:.3rem}.moderation-approve:hover,.moderation-rejected:hover{cursor:pointer}.moderation-approve{background:#00a827}.moderation-rejected{background:red}.complain{width:3rem;height:3rem;position:absolute;right:.3rem;top:0;overflow:hidden}.complain-item{position:absolute;right:-1.5rem;top:-1.5rem;width:3rem;height:3rem;background:#f3f3f3;line-height:3rem;transform:rotate(45deg);-ms-transform:rotate(45deg);-moz-transform:rotate(45deg);z-index:11}.complain-item>span{position:absolute;-ms-transform:rotate(-45deg);-moz-transform:rotate(-45deg);transform:rotate(-45deg);top:.9rem;right:1.2rem;color:#cbcbcb;font-weight:bold;font-size:.9rem}.complain-item:hover{cursor:pointer;background:red;-webkit-transition:background-color 250ms linear;transition:background-color 250ms linear}.complain-item:hover>span{color:#fff}.contacts-open{margin-top:1rem;width:100%}.contacts-view{margin-top:1rem;width:100%}.contacts-view>a{width:100%}.contacts-error{margin-top:1rem;text-align:center}/*# sourceMappingURL=style.css.map */
+
+#popup-back-task .tabs-head ul li{
+    text-align: center;
+}
+#popup-back-task .tabs-head ul{
+    width: inherit;
+    padding: 0px;
+    text-align: center;
+}
+.popup.popup-back-task {
+    width: 420px;
+    padding: 0;
+    display: inline-block;
+}
+
+
+.popup-back-task .tabs-head ul li.active a {
+    background: #FFF;
+}
+.popup-back-task .tabs-head ul li a {
+    display: block;
+    padding: 10px 15px;
+    font-size: 16px;
+    line-height: 20px;
+    border: none;
+    color: inherit;
+    font-weight: 600;
+}
+.moderation > a{
+    flex: 1;
+    margin: .3rem;
+}
+.listReason .refusal_app_form{
+    padding: 0px 0px 0px 18px;
+    margin-top: 25px;
+}
+.listReason .refusal_app_form li{
+    list-style: decimal;
+    margin-top: 6px;
+}
+.alert-success-error {
+    border: 1px solid #a80202;
+
+    background-color: rgba(145,200,75,.6);
+    /*border-color: #91c84b;*/
+    color: #75a933;
+    overflow: hidden;
+    padding: 15px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+label[for="create-inp3"]{
+    margin-top: 38px;
+    margin-left: 10px;
+}

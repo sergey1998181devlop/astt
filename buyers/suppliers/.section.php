@@ -1,0 +1,5 @@
+<?
+$sSectionName = "Заказчикам";
+$arDirProperties = array(
+);
+?>

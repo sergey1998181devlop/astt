@@ -1,0 +1,7 @@
+<?
+if($INCLUDE_FROM_CACHE!='Y')return false;
+$datecreate = '001615465898';
+$dateexpire = '001615638698';
+$ser_content = 'a:2:{s:7:"CONTENT";s:0:"";s:4:"VARS";a:1:{s:33:"251e828a6e46316992a393483275f93e8";a:1:{i:2;a:7:{s:2:"ID";s:33:"251e828a6e46316992a393483275f93e8";s:9:"MODULE_ID";s:4:"main";s:9:"UNDO_TYPE";s:8:"autosave";s:12:"UNDO_HANDLER";s:19:"CAutoSave::_Restore";s:7:"CONTENT";s:936:"a:21:{s:6:"filter";s:1:"Y";s:10:"set_filter";s:1:"Y";s:6:"Update";s:1:"Y";s:2:"ID";s:22:"democontent2_pi_remont";s:8:"back_url";s:43:"/bitrix/admin/iblock_type_admin.php?lang=ru";s:8:"SECTIONS";s:1:"Y";s:49:"LANG_FIELDSX000091XruX000093XX000091XNAMEX000093X";s:18:"Автокраны";s:57:"LANG_FIELDSX000091XruX000093XX000091XSECTION_NAMEX000093X";s:14:"Разделы";s:57:"LANG_FIELDSX000091XruX000093XX000091XELEMENT_NAMEX000093X";s:14:"Задания";s:49:"LANG_FIELDSX000091XenX000093XX000091XNAMEX000093X";s:18:"Автокраны";s:57:"LANG_FIELDSX000091XenX000093XX000091XSECTION_NAMEX000093X";s:14:"Разделы";s:57:"LANG_FIELDSX000091XenX000093XX000091XELEMENT_NAMEX000093X";s:14:"Задания";s:6:"IN_RSS";s:0:"";s:4:"SORT";s:2:"10";s:16:"EDIT_FILE_BEFORE";s:0:"";s:6:"browse";s:0:"";s:15:"EDIT_FILE_AFTER";s:0:"";s:4:"save";s:0:"";s:5:"apply";s:0:"";s:6:"cancel";s:0:"";s:21:"tabControl_active_tab";s:5:"edit1";}";s:7:"USER_ID";s:1:"2";s:11:"TIMESTAMP_X";s:10:"1599390929";}}}}';
+return true;
+?>

@@ -1,0 +1,38 @@
+.page-404 {
+}
+@media only screen and (min-width: 768px) {
+  .page-404 .white-block {
+    padding-top: 25px;
+    padding-bottom: 45px
+  }
+}
+
+.page-404 .h1 {
+  margin: 0
+}
+
+.page-404 .numbers {
+  font-size: 200px;
+  line-height: 220px;
+  margin: 0 0 25px;
+  color: #b5baba;
+  text-shadow: 0 25px 10px rgba(226, 232, 232, .5)
+}
+
+@media only screen and (max-width: 767px) {
+  .page-404 .numbers {
+    font-size: 100px;
+    line-height: 120px;
+    margin-bottom: 10px;
+    text-shadow: 0 15px 10px rgba(226, 232, 232, .5)
+  }
+}
+
+.page-404 .text {
+  max-width: 400px;
+  margin: 0 auto
+}
+
+.white-block.vip-container-wrap {
+  margin: 10px 0 0
+}

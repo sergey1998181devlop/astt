@@ -1,0 +1,43 @@
+.complain{
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    right: 0.0rem;
+    top: 0;
+    overflow: hidden;
+}
+.complain-item{
+    position: absolute;
+    right: -1.5rem;
+    top: -1.5rem;
+    width: 3rem;
+    height: 3rem;
+    background: #f3f3f3;
+    line-height: 3rem;
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    z-index: 11;
+}
+.complain-item > span{
+    position: absolute;
+    -ms-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: .9rem;
+    right: 1.2rem;
+    color: #cbcbcb;
+    font-weight: bold;
+    font-size: .9rem;
+}
+.span-star{
+    width: 15px;
+    height: 15px;
+    margin: 7px 7px 0px 0px;
+}
+
+.complain-item:hover {
+    background: #bfbfbf;
+    -webkit-transition: background-color 250ms linear;
+    transition: background-color 250ms linear
+}

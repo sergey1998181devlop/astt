@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="adf5f8a1-c26e-4756-965c-1999078a9e30" name="develop (1)" url="http://develop.su">
+        <fileTransfer mountedRoot="/run/user/1002/gvfs/smb-share:server=shara.local,share=web/develop.su" accessType="MOUNT" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>

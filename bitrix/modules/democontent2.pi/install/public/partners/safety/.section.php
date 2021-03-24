@@ -1,0 +1,5 @@
+<?
+$sSectionName = "#SAFETY#";
+$arDirProperties = array(
+);
+?>

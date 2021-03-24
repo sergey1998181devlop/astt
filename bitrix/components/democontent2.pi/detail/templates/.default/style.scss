@@ -1,0 +1,99 @@
+.moderation {
+  display: flex;
+  margin-top: 1rem;
+
+  & > form {
+    flex: 1;
+    margin: .3rem;
+  }
+
+  &-approve, &-rejected {
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding: .3rem;
+    border: none;
+    border-radius: .3rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &-approve {
+    background: #00a827;
+  }
+
+  &-rejected {
+    background: red;
+  }
+}
+
+.complain {
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  right: .3rem;
+  top: 0;
+  overflow: hidden;
+
+  &-item {
+    position: absolute;
+    right: -1.5rem;
+    top: -1.5rem;
+    width: 3rem;
+    height: 3rem;
+    background: #b9b7b7;
+    line-height: 3rem;
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    z-index: 11;
+
+    & > span {
+      position: absolute;
+      -ms-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      top: .9rem;
+      right: 1.2rem;
+      color: #cbcbcb;
+      font-weight: bold;
+      font-size: .9rem;
+      width:15px;
+      height:15px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background: #91c84b;
+      -webkit-transition: background-color 250ms linear;
+      transition: background-color 250ms linear;
+
+      & > span {
+        color: white;
+      }
+    }
+  }
+}
+
+.contacts {
+  &-open {
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  &-view {
+    margin-top: 1rem;
+    width: 100%;
+
+    & > a {
+      width: 100%;
+    }
+  }
+
+  &-error{
+    margin-top: 1rem;
+    text-align: center;
+  }
+}

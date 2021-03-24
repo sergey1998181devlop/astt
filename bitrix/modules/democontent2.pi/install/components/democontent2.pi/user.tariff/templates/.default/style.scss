@@ -1,0 +1,57 @@
+.package {
+  &-root {
+    width: 100%;
+    display: inline-block;
+    margin: .4rem 0 .4rem 0;
+
+    &__label, &__price {
+      display: inline;
+    }
+
+    &__price {
+      float: right;
+    }
+  }
+
+  &-sub {
+    width: 100%;
+    display: inline-block;
+    padding-left: 1.5rem;
+    margin: .4rem 0 .4rem 0;
+
+    &__label, &__price {
+      display: inline;
+    }
+
+    &__price {
+      float: right;
+    }
+
+    &__label > label.package-label_disabled {
+      color: grey;
+
+      & > .icon-wrap {
+        border-color: grey;
+
+        & > .icon {
+          fill: grey;
+        }
+      }
+    }
+  }
+
+  &-payment {
+    font-size: .8rem;
+
+    &--danger {
+      color: red;
+    }
+  }
+}
+
+.total.tbl{
+  width: 100%;
+  border-top: 1px solid grey;
+  margin-top: 1rem;
+  padding-top: 1rem;
+}

@@ -1,0 +1,43 @@
+.checklist-area {
+    margin-top: 1rem;
+}
+
+.checklist-value {
+    font-size: .9rem;
+    color: #949494;
+}
+
+.checklist-value > .icon_checkmark {
+    width: .9rem;
+    height: .9rem;
+    fill: #00a827;
+}
+
+.checklist-tag {
+    font-size: .8rem;
+    color: #fff;
+    display: inline-block;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+    background-color: #cbcbcb;
+    border-radius: .3rem;
+}
+
+.checklist-tag:not(:last-child) {
+    margin-right: .4rem;
+}
+
+.checklist-tag:hover {
+    cursor: pointer;
+    background-color: #949494;
+}
+
+.checklist-tag.active {
+    background-color: #1DA1F2;
+}
+
+.responses-preview.hidden {
+    display: none;
+}

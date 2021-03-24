@@ -1,0 +1,1553 @@
+openapi: 3.0.0
+info:
+  description: >
+    Описание методов API к модулю [Сервис поиска исполнителей, биржа
+    услуг](https://marketplace.1c-bitrix.ru/solutions/democontent2.pi/?from=swagger)
+
+    Если у вас есть предложения по поводу развития API, и в частности касаемо
+    добавления новых методов, напишите пожалуйста на support@democontent.ru,
+
+    или позвоните по номеру +7 (495) 005-23-76
+  version: "1.0.0-oas3"
+  title: Сервис поиска исполнителей
+  contact:
+    email: support@democontent.ru
+externalDocs:
+  description: Find out more about Swagger
+  url: 'http://swagger.io'
+tags:
+  - name: other
+    description: Прочее
+  - name: user
+    description: Пользователь
+  - name: tasks
+    description: Методы для работы с заданиями и категориями
+  - name: portfolio
+    description: Методы для работы с портфолио пользователей
+  - name: order
+    description: Методы для работы с платежами и заказами
+  - name: blacklist
+    description: Чёрный список
+paths:
+  /auth/:
+    get:
+      tags:
+        - user
+      summary: Авторизация пользователя
+      operationId: auth
+      parameters:
+        - name: X-PI-EMAIL
+          in: header
+          required: true
+          description: Email
+          schema:
+            type: string
+        - name: X-PI-PASSWORD
+          in: header
+          required: true
+          description: Пароль
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+          headers:
+            X-PI-KEY:
+              description: >-
+                Данный заголовок возвращается в случае успешной авторизации
+                пользователя, и содержит новый API ключ пользователя. Т.е. после
+                каждой успешной авторизации - API ключ меняется.
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthResponse'
+  /balance/:
+    get:
+      tags:
+        - user
+      summary: Баланс пользователя
+      operationId: balance
+      parameters:
+        - name: X-PI-KEY
+          in: header
+          required: true
+          description: Api ключ
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BalanceResponse'
+  /cities/:
+    get:
+      tags:
+        - other
+      summary: Справочник городов
+      operationId: cities
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CitiesResponse'
+  /favourites/:
+    get:
+      tags:
+        - user
+      summary: Список избранных исполнителей
+      operationId: favourites
+      parameters:
+        - name: X-PI-KEY
+          in: header
+          required: true
+          description: Api ключ
+          schema:
+            type: string
+      responses:
+        '200':
+          description: >-
+            Метод возвращает список идентификаторов пользовпателей которые
+            отмечены как избранные
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FavouritesResponse'
+  /changefavourite/:
+    get:
+      tags:
+        - user
+      summary: Добавляет или удаляет пользователя из избранного
+      operationId: changefavourite
+      parameters:
+        - name: X-PI-KEY
+          in: header
+          required: true
+          description: Api ключ
+          schema:
+            type: string
+        - name: id
+          in: query
+          required: true
+          description: Id пользователя которого нужно добавить/удалить
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: >-
+            Метод возвращает список идентификаторов пользовпателей которые
+            отмечены как избранные
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChangeFavouriteResponse'
+  /user/:
+    get:
+      tags:
+        - user
+      summary: Профиль пользователя
+      operationId: user
+      parameters:
+        - name: X-PI-KEY
+          in: header
+          required: false
+          description: Api ключ
+          schema:
+            type: string
+        - name: id
+          in: query
+          required: false
+          description: Id пользователя
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: >-
+            Метод возвращает параметры аккаунта пользователя. Если передан
+            заголовок X-PI-KEY будут возвращены расширенные параметры
+            авторизованного пользователя, если заголовка нет и передан параметр
+            {id} - будут возвращены параметры публичного профиля найденного
+            пользователя, в сокращённом виде.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserResponse'
+  /notifications/:
+    get:
+      tags:
+        - user
+      summary: Уведомления
+      operationId: notifications
+      parameters:
+        - name: X-PI-KEY
+          in: header
+          required: true
+          description: Api ключ
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Метод возвращает список уведомлений пользователя
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotificationsResponse'
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                read:
+                  description: Флаг прочтения
+                  type: boolean
+  /categories/:
+    get:
+      tags:
+        - tasks
+      summary: Справочник категорий
+      operationId: categories
+      responses:
+        '200':
+          description: Метод возвращает справочник категорий и субкатегорий
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CategoriesResponse'
+  /reviews/:
+    get:
+      tags:
+        - user
+      summary: Отзывы о пользователе
+      operationId: reviews
+      parameters:
+        - name: id
+          in: query
+          required: true
+          description: Id пользователя
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Метод возвращает отвызы о пользователе
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReviewsResponse'
+  /updateuser/:
+    post:
+      tags:
+        - user
+      summary: Уведомления
+      operationId: updateuser
+      parameters:
+        - name: X-PI-KEY
+          in: header
+          required: true
+          description: Api ключ
+          schema:
+            type: string
+        - name: name
+          in: query
+          required: false
+          description: Новое имя
+          schema:
+            type: string
+        - name: lastName
+          in: query
+          required: false
+          description: Новая фамилия
+          schema:
+            type: string
+        - name: cityId
+          in: query
+          required: false
+          description: Id города
+          schema:
+            type: integer
+        - name: password
+          in: query
+          required: false
+          description: Новый пароль (мин. 6 символов)
+          schema:
+            type: string
+            minLength: 6
+      responses:
+        '200':
+          description: Метод обновляет профиль пользователя
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserUpdateResponse'
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                photo:
+                  description: Файл картинки
+                  type: string
+                  format: binary
+  /register/:
+    post:
+      tags:
+        - user
+      summary: Регистрация пользователя
+      operationId: register
+      responses:
+        '200':
+          description: >-
+            Метод регистрирует нового пользователя, и в случае успеха возвращает
+            API ключ в заголовке X-PI-KEY
+          headers:
+            X-PI-KEY:
+              description: >-
+                Данный заголовок возвращается в случае успешной регистрации
+                пользователя и содержит API ключ зарегистрированного
+                пользователя
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RegisterResponse'
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                name:
+                  description: Имя пользователя
+                  type: string
+                email:
+                  description: Email
+                  type: string
+                phone:
+                  description: Номер мобильного телефона
+                  type: string
+              required:
+                - name
+                - email
+                - phone
+  /portfolioadd/:
+    post:
+      tags:
+        - portfolio
+      summary: Добавление раздела в портфолио
+      operationId: portfolioadd
+      parameters:
+        - name: X-PI-KEY
+          in: header
+          required: true
+          description: Api ключ
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Метод добавляет новую категорию в портфолио пользователя
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PortfolioAddResponse'
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                categoryName:
+                  description: Название раздела
+                  type: string
+              required:
+                - categoryName
+  /portfolioremove/:
+    get:
+      tags:
+        - portfolio
+      summary: Удаление раздела портфолио
+      operationId: portfolioremove
+      parameters:
+        - name: X-PI-KEY
+          in: header
+          required: true
+          description: Api ключ
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Метод удаляет раздел вместе с содержимым из портфолио пользователя
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DefaultSuccessResponse'
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                id:
+                  description: Id раздела
+                  type: integer
+              required:
+                - id
+  /portfolioget/:
+    get:
+      tags:
+        - portfolio
+      summary: Раздел портфолио пользователя
+      operationId: portfolioget
+      responses:
+        '200':
+          description: >-
+            Метод возвращает содержимое конкретного раздела портфолио
+            пользователя
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PortfolioGetResponse'
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                id:
+                  description: Id раздела портфолио
+                  type: integer
+                userId:
+                  description: Id пользователя
+                  type: integer
+              required:
+                - id
+                - userId
+  /portfoliolist/:
+    get:
+      tags:
+        - portfolio
+      summary: Список разделов портфолио пользователя
+      operationId: portfoliolist
+      responses:
+        '200':
+          description: Метод возвращает список разделов портфолио пользователя
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PortfolioListResponse'
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                userId:
+                  description: Id пользователя
+                  type: integer
+              required:
+                - userId
+  /portfoliochangefiledescription/:
+    post:
+      tags:
+        - portfolio
+      summary: Изменение описания файла в разделе портфолио
+      operationId: portfoliochangefiledescription
+      parameters:
+        - name: X-PI-KEY
+          in: header
+          required: true
+          description: Api ключ
+          schema:
+            type: string
+      responses:
+        '200':
+          description: >-
+            Метод изменяет описание конкретного файла в конкретном разделе
+            портфолио пользователя
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DefaultSuccessResponse'
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                id:
+                  description: Id раздела
+                  type: integer
+                fileId:
+                  description: Id файла
+                  type: integer
+                description:
+                  description: Новое описание файла
+                  type: string
+              required:
+                - id
+                - fileId
+                - description
+  /portfolioremovefile/:
+    get:
+      tags:
+        - portfolio
+      summary: Удаление файла из раздела портфолио
+      operationId: portfolioremovefile
+      parameters:
+        - name: X-PI-KEY
+          in: header
+          required: true
+          description: Api ключ
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Метод удаляет конкретный файл из раздела портфолио
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DefaultSuccessResponse'
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                id:
+                  description: Id раздела
+                  type: integer
+                fileId:
+                  description: Id файла
+                  type: integer
+              required:
+                - id
+                - fileId
+  /portfoliouploadfiles/:
+    post:
+      tags:
+        - portfolio
+      summary: Добавление файлов в портфолио
+      operationId: portfoliouploadfiles
+      parameters:
+        - name: X-PI-KEY
+          in: header
+          required: true
+          description: Api ключ
+          schema:
+            type: string
+      responses:
+        '200':
+          description: >-
+            Метод загружает файлы в раздел портфолио. В случае успешной проверки
+            принадлежности раздела к пользователю будет вернётся успешный ответ,
+            однако не все файлы могут быть успешно загружены, подробную
+            статистику следует смотреть в параметре ответа extra.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DefaultSuccessResponse'
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                id:
+                  description: Id раздела
+                  type: integer
+                files:
+                  description: Массив с файлами
+                  type: string
+                  format: binary
+              required:
+                - id
+                - files
+  /orderstatus/:
+    get:
+      tags:
+        - order
+      summary: Статус оплаты заказа
+      operationId: orderstatus
+      parameters:
+        - name: X-PI-KEY
+          in: header
+          required: true
+          description: Api ключ
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Метод возвращает флаг оплаты заказа (status)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OrderStatusResponse'
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                id:
+                  description: Id заказа
+                  type: integer
+              required:
+                - id
+  /blacklist/:
+    get:
+      tags:
+        - blacklist
+      summary: Чёрный список
+      operationId: blacklist
+      parameters:
+        - name: X-PI-KEY
+          in: header
+          required: true
+          description: Api ключ
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Метод возвращает чёрный список пользователей
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BlackListResponse'
+  /addtoblacklist/:
+    get:
+      tags:
+        - blacklist
+      summary: Добавление в чёрный список
+      operationId: addtoblacklist
+      parameters:
+        - name: X-PI-KEY
+          in: header
+          required: true
+          description: Api ключ
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Метод добавляет пользователя в чёрный список
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DefaultSuccessResponse'
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                id:
+                  description: Id пользователя которого нужно добавить в чёрный список
+                  type: integer
+              required:
+                - id
+  /removefromblacklist/:
+    get:
+      tags:
+        - blacklist
+      summary: Удаление пользователя из чёрного списка
+      operationId: removefromblacklist
+      parameters:
+        - name: X-PI-KEY
+          in: header
+          required: true
+          description: Api ключ
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Метод удаляет пользователя из чёрного списка
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DefaultSuccessResponse'
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                id:
+                  description: Id пользователя которого нужно удалить из чёрного списка
+                  type: integer
+              required:
+                - id
+  /tasks/:
+    get:
+      tags:
+        - tasks
+      summary: Список заданий
+      operationId: tasks
+      parameters:
+        - name: X-PI-KEY
+          in: header
+          required: false
+          description: Api ключ
+          schema:
+            type: string
+      responses:
+        '200':
+          description: >-
+            Метод возвращает список заданий согласно параметрам фильтрации, а
+            также, основную информацию о пользователе разместившем конкретное
+            задание.<br>В случае, если будет передан заголовок X-PI-KEY, будет
+            возвращён список заданий автором которых является данный
+            пользователь.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TasksResponse'
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                page:
+                  description: Номер страницы (2 и выше)
+                  type: integer
+                  minimum: 2
+                order:
+                  description: |
+                    Сортировка:
+                     * По умолчанию применяется сортировка от новых к старым
+                     * `old` - От старых к новым
+                     * `expensive` - По убыванию цены
+                     * `cheap` - По возрастанию цены
+                     * `popular` - По популярности
+                     * `moreFeedback` - По убыванию количества откликов
+                     * `lessFeedback` - По возрастанию количества откликов
+                  type: string
+                quickly:
+                  description: С пометкой "Срочно"
+                  type: boolean
+                safe:
+                  description: С безопасной сделкой
+                  type: boolean
+                noResponses:
+                  description: Без откликов
+                  type: boolean
+                lessThan10:
+                  description: Менее 10 откликов
+                  type: boolean
+                cityId:
+                  description: Id города
+                  type: integer
+                categoryType:
+                  description: Код категории первого уровня
+                  type: string
+                categoryId:
+                  description: Id категории второго уровня
+                  type: integer
+  /properties/:
+    get:
+      tags:
+        - tasks
+      summary: Справочник свойств
+      operationId: properties
+      responses:
+        '200':
+          description: Метод возвращает список свойств для конкретной категории
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PropertiesResponse'
+  /edittask/:
+    post:
+      tags:
+        - tasks
+      summary: Редактирование задания
+      operationId: edittask
+      parameters:
+        - name: X-PI-KEY
+          in: header
+          required: true
+          description: Api ключ
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Метод позволяет отредактировать задание
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DefaultSuccessResponse'
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                id:
+                  description: Id задания
+                  type: integer
+                categoryId:
+                  description: Id раздела
+                  type: integer
+                cityId:
+                  description: Id города
+                  type: integer
+                name:
+                  description: Заголовок (название) задания
+                  type: string
+                description:
+                  description: Описание задания
+                  type: string
+                location:
+                  description: |
+                    Координаты (широта, долгота) Пример: [45.34536, 63.2547436]
+                  type: object
+                price:
+                  description: Бюджет
+                  type: integer
+                route:
+                  description: |
+                    Массив координат маршрута (широта, долгота) Пример: ["45.34536, 63.2547436", "45.34536, 63.2547436", "45.34536, 63.2547436"]
+                  type: object
+                prop:
+                  description: Массив идентификаторов характеристик и значений
+                  type: object
+                dateStart:
+                  description: |
+                    Дата начала в любом формате даты. Например: dd.mm.yyyy или YYYY-MM-DD и т.д.
+                  type: string
+                dateEnd:
+                  description: |
+                    Дата окончания в любом формате даты. Например: dd.mm.yyyy или YYYY-MM-DD и т.д.
+                  type: string
+                timeStart:
+                  description: |
+                    Время начала (час:минута). Например: 00:00
+                  type: string
+                timeEnd:
+                  description: |
+                    Время окончания (час:минута). Например: 15:00
+                  type: string
+                stages:
+                  description: |
+                    Массив этапов задания. В качестве индекса элемента должен быть указан идентификатор этапа, ключи элемента: name (string), price (float), contractPrice (boolean)
+                  type: object
+                deleteStages:
+                  description: Массив идентификаторов этапов которые нужно удалить
+                  type: object
+                newStages:
+                  description: Массив новых этапов задания. Ключи элемента name (string), price (float), contractPrice (boolean)
+                  type: object
+                security:
+                  description: Флаг безопасной сделки
+                  type: boolean
+                files:
+                  description: Массив с публичными файлами задания
+                  type: object
+                hiddenFiles:
+                  description: Массив со скрытыми файлами задания
+                  type: object
+                removeFiles:
+                  description: Массив с идентификаторами файлов, которые нужно удалить из задания
+                  type: object
+              required:
+                - id
+                - categoryId
+                - cityId
+                - name
+                - description
+servers:
+  - url: 'https://pi.democontent.ru/api/v1'
+components:
+  schemas:
+    DefaultSuccessResponse:
+      type: object
+      required:
+        - errorCode
+        - errorMessage
+        - result
+        - extra
+      properties:
+        errorCode:
+          type: integer
+        errorMessage:
+          type: string
+        result:
+          type: object
+        extra:
+          type: object
+      xml:
+        name: DefaultSuccessResponse
+    AuthResponse:
+      type: object
+      required:
+        - errorCode
+        - errorMessage
+        - result
+        - extra
+      properties:
+        errorCode:
+          type: integer
+        errorMessage:
+          type: string
+        result:
+          type: object
+          properties:
+            id:
+              type: integer
+        extra:
+          type: object
+      xml:
+        name: AuthResponse
+    BalanceResponse:
+      type: object
+      required:
+        - errorCode
+        - errorMessage
+        - result
+        - extra
+      properties:
+        errorCode:
+          type: integer
+        errorMessage:
+          type: string
+        result:
+          type: object
+          properties:
+            amount:
+              type: integer
+        extra:
+          type: object
+      xml:
+        name: BalanceResponse
+    CitiesResponse:
+      type: object
+      required:
+        - errorCode
+        - errorMessage
+        - result
+        - extra
+      properties:
+        errorCode:
+          type: integer
+        errorMessage:
+          type: string
+        result:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+                format: int32
+              name:
+                type: string
+              code:
+                type: string
+              declension:
+                type: string
+              coordinates:
+                type: array
+                items:
+                  type: number
+              isDefault:
+                type: boolean
+        extra:
+          type: object
+      xml:
+        name: CitiesResponse
+    FavouritesResponse:
+      type: object
+      required:
+        - errorCode
+        - errorMessage
+        - result
+        - extra
+      properties:
+        errorCode:
+          type: integer
+        errorMessage:
+          type: string
+        result:
+          type: array
+          items:
+            type: integer
+        extra:
+          type: object
+      xml:
+        name: FavouritesResponse
+    ChangeFavouriteResponse:
+      type: object
+      required:
+        - errorCode
+        - errorMessage
+        - result
+        - extra
+      properties:
+        errorCode:
+          type: integer
+        errorMessage:
+          type: string
+        result:
+          type: object
+        extra:
+          type: object
+      xml:
+        name: ChangeFavouriteResponse
+    UserResponse:
+      type: object
+      required:
+        - errorCode
+        - errorMessage
+        - result
+        - extra
+      properties:
+        errorCode:
+          type: integer
+        errorMessage:
+          type: string
+        result:
+          type: object
+          properties:
+            id:
+              type: integer
+              format: int32
+            registeredAt:
+              type: integer
+              format: int32
+            name:
+              type: string
+            lastName:
+              type: string
+            email:
+              type: string
+            description:
+              type: string
+            phone:
+              type: string
+            formattedPhone:
+              type: string
+            photo:
+              type: object
+              properties:
+                src:
+                  type: string
+                width:
+                  type: integer
+                  format: int32
+                height:
+                  type: integer
+                  format: int32
+                size:
+                  type: integer
+                  format: int32
+            isModerationOff:
+              type: boolean
+            isExecutor:
+              type: boolean
+            isDocumentsChecked:
+              type: boolean
+            personalLimit:
+              type: integer
+              format: int32
+            safeCrowId:
+              type: integer
+              format: int32
+            cityId:
+              type: integer
+              format: int32
+            rating:
+              type: number
+            subscriptions:
+              type: array
+              items:
+                type: object
+                properties:
+                  categoryId:
+                    type: integer
+                    format: int32
+                  paidTo:
+                    type: integer
+                    format: int32
+            specializations:
+              type: array
+              items:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int32
+                  name:
+                    type: string
+        extra:
+          type: object
+      xml:
+        name: UserResponse
+    NotificationsResponse:
+      type: object
+      required:
+        - errorCode
+        - errorMessage
+        - result
+        - extra
+      properties:
+        errorCode:
+          type: integer
+        errorMessage:
+          type: string
+        result:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+                format: int32
+              type:
+                type: string
+              name:
+                type: string
+              createdAt:
+                type: integer
+                format: int32
+              params:
+                type: object
+                properties:
+                  taskId:
+                    type: integer
+                    format: int32
+                  categoryId:
+                    type: integer
+                    format: int32
+        extra:
+          type: object
+      xml:
+        name: NotificationsResponse
+    CategoriesResponse:
+      type: object
+      required:
+        - errorCode
+        - errorMessage
+        - result
+        - extra
+      properties:
+        errorCode:
+          type: integer
+        errorMessage:
+          type: string
+        result:
+          type: array
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+              code:
+                type: string
+              subCategories:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                      format: int32
+                    name:
+                      type: string
+                    code:
+                      type: string
+        extra:
+          type: object
+      xml:
+        name: CategoriesResponse
+    ReviewsResponse:
+      type: object
+      required:
+        - errorCode
+        - errorMessage
+        - result
+        - extra
+      properties:
+        errorCode:
+          type: integer
+        errorMessage:
+          type: string
+        result:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+                format: int32
+              categoryId:
+                type: integer
+                format: int32
+              taskId:
+                type: integer
+                format: int32
+              fromId:
+                type: integer
+                format: int32
+              toId:
+                type: integer
+                format: int32
+              rating:
+                type: integer
+                format: int32
+              text:
+                type: string
+              answer:
+                type: string
+                format: nullable
+              textTime:
+                type: integer
+                format: int32
+              answerTime:
+                type: integer
+                format: int32
+              fromName:
+                type: string
+              fromLastName:
+                type: string
+              toName:
+                type: string
+              toLastName:
+                type: string
+              fromPhoto:
+                type: object
+                properties:
+                  src:
+                    type: string
+                  width:
+                    type: integer
+                    format: int32
+                  height:
+                    type: integer
+                    format: int32
+                  size:
+                    type: integer
+                    format: int32
+              toPhoto:
+                type: object
+                properties:
+                  src:
+                    type: string
+                  width:
+                    type: integer
+                    format: int32
+                  height:
+                    type: integer
+                    format: int32
+                  size:
+                    type: integer
+                    format: int32
+        extra:
+          type: object
+      xml:
+        name: ReviewsResponse
+    UserUpdateResponse:
+      type: object
+      required:
+        - errorCode
+        - errorMessage
+        - result
+        - extra
+      properties:
+        errorCode:
+          type: integer
+        errorMessage:
+          type: string
+        result:
+          type: object
+        extra:
+          type: object
+      xml:
+        name: UserUpdateResponse
+    RegisterResponse:
+      type: object
+      required:
+        - errorCode
+        - errorMessage
+        - result
+        - extra
+      properties:
+        errorCode:
+          type: integer
+        errorMessage:
+          type: string
+        result:
+          type: object
+        extra:
+          type: object
+      xml:
+        name: RegisterResponse
+    PortfolioAddResponse:
+      type: object
+      required:
+        - errorCode
+        - errorMessage
+        - result
+        - extra
+      properties:
+        errorCode:
+          type: integer
+        errorMessage:
+          type: string
+        result:
+          type: object
+          properties:
+            id:
+              type: integer
+              format: int32
+        extra:
+          type: object
+      xml:
+        name: PortfolioAddResponse
+    PortfolioGetResponse:
+      type: object
+      required:
+        - errorCode
+        - errorMessage
+        - result
+        - extra
+      properties:
+        errorCode:
+          type: integer
+        errorMessage:
+          type: string
+        result:
+          type: object
+          properties:
+            id:
+              type: integer
+              format: int32
+            name:
+              type: string
+            files:
+              type: array
+              items:
+                type: object
+                properties:
+                  path:
+                    type: string
+                  description:
+                    type: string
+        extra:
+          type: object
+      xml:
+        name: PortfolioGetResponse
+    PortfolioListResponse:
+      type: object
+      required:
+        - errorCode
+        - errorMessage
+        - result
+        - extra
+      properties:
+        errorCode:
+          type: integer
+        errorMessage:
+          type: string
+        result:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+                format: int32
+              name:
+                type: string
+        extra:
+          type: object
+      xml:
+        name: PortfolioListResponse
+    OrderStatusResponse:
+      type: object
+      required:
+        - errorCode
+        - errorMessage
+        - result
+        - extra
+      properties:
+        errorCode:
+          type: integer
+        errorMessage:
+          type: string
+        result:
+          type: object
+          properties:
+            id:
+              type: integer
+              format: int32
+            status:
+              type: integer
+              format: int32
+        extra:
+          type: object
+      xml:
+        name: OrderStatusResponse
+    BlackListResponse:
+      type: object
+      required:
+        - errorCode
+        - errorMessage
+        - result
+        - extra
+      properties:
+        errorCode:
+          type: integer
+        errorMessage:
+          type: string
+        result:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+                format: int32
+              createdAt:
+                type: integer
+                format: int32
+              name:
+                type: string
+              image:
+                type: string
+        extra:
+          type: object
+      xml:
+        name: BlackListResponse
+    TasksResponse:
+      type: object
+      required:
+        - errorCode
+        - errorMessage
+        - result
+        - extra
+      properties:
+        errorCode:
+          type: integer
+        errorMessage:
+          type: string
+        result:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+                format: int32
+              categoryType:
+                type: string
+              categoryId:
+                type: integer
+                format: int32
+              cityId:
+                type: integer
+                format: int32
+              cityName:
+                type: string
+              name:
+                type: string
+              description:
+                type: string
+              price:
+                type: integer
+                format: int32
+              views:
+                type: integer
+                format: int32
+              safe:
+                type: integer
+                format: int32
+              quickly:
+                type: integer
+                format: int32
+              user:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    format: int32
+                  name:
+                    type: string
+                  photo:
+                    type: string
+                  cityId:
+                    type: integer
+                    format: int32
+                  reviewsCount:
+                    type: integer
+                    format: int32
+                  totalRating:
+                    type: number
+                  ratingDetails:
+                    type: object
+                    properties:
+                      positive:
+                        type: integer
+                        format: int32
+                      negative:
+                        type: integer
+                        format: int32
+                      neutral:
+                        type: integer
+                        format: int32
+        extra:
+          type: object
+      xml:
+        name: TasksResponse
+    PropertiesResponse:
+      type: object
+      required:
+        - errorCode
+        - errorMessage
+        - result
+        - extra
+      properties:
+        errorCode:
+          type: integer
+        errorMessage:
+          type: string
+        result:
+          type: array
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+              id:
+                type: integer
+                format: int32
+              name:
+                type: string
+              code:
+                type: string
+              isRequired:
+                type: integer
+                format: int32
+              values:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                      format: int32
+                    name:
+                      type: string
+                    isDefault:
+                      type: integer
+                      format: int32
+                    xmlId:
+                      type: string
+        extra:
+          type: object
+      xml:
+        name: CitiesResponse

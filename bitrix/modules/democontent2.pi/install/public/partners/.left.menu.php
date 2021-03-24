@@ -1,0 +1,25 @@
+<?
+$aMenuLinks = array(
+    array(
+        "#SAFETY#",
+        "safety/",
+        array(),
+        array(),
+        ""
+    ),
+    array(
+        "#RECOMENDS#",
+        "recomends/",
+        array(),
+        array(),
+        ""
+    ),
+    array(
+        "#HOWTO#",
+        "recomends/",
+        array(),
+        array(),
+        ""
+    )
+);
+?>
