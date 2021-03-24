@@ -59,10 +59,10 @@ return array (
       'default' => 
       array (
         'className' => '\\Bitrix\\Main\\DB\\MysqliConnection',
-        'host' => '62.109.27.226',
-        'database' => 'sitemanager',
-        'login' => 'bitrix0',
-        'password' => 'AL0Bt+TXc0Af)95ic!mp',
+        'host' => 'local-sitemanager.sql',
+        'database' => 'local-sitemanager.sql',
+        'login' => 'local-sitemanager.sql',
+        'password' => 'local-sitemanager.sql',
         'options' => 2,
       ),
     ),
