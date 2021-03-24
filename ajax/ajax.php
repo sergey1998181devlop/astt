@@ -6,7 +6,7 @@ use Bitrix\Main\Mail\Event;
 use Bitrix\Main;
 use Bitrix\Main\Authentication\ApplicationPasswordTable;
 use Bitrix\Main\Localization\Loc;
-$smsru = new SMSRU('A0167F15-F7C8-1183-CFB5-AED38CFDC70E'); // Ваш уникальный программный ключ, который можно получить на главной странице
+$smsru = new SMSRU('keysms'); // Ваш уникальный программный ключ, который можно получить на главной странице
 if($_POST['Forrgot'] == 'Y' && !empty($_POST['login'])){
     if($_POST['type'] == 'restorePasswordPhone'){
         $_POST['login'] = preg_replace('![^0-9]+!', '', $_POST['login']);
