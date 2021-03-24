@@ -4,10 +4,10 @@ umask(000);
 @umask(~BX_DIR_PERMISSIONS);
 define("DBPersistent", false);
 $DBType = "mysql";
-$DBHost = "62.109.27.226";
-$DBLogin = "bitrix0";
-$DBPassword = "AL0Bt+TXc0Af)95ic!mp";
-$DBName = "sitemanager";
+$DBHost = "local-sitemanager.sql";
+$DBLogin = "local-sitemanager.sql";
+$DBPassword = "local-sitemanager.sql";
+$DBName = "local-sitemanager.sql";
 $DBDebug = true;
 $DBDebugToFile = false;
 
